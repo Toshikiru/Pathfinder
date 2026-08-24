@@ -1,0 +1,11 @@
+[SIMULATED DATA] This document is a realistic reconstruction for the Pathfinder capstone project. It is modeled on CHED Memorandum Order No. 25, s. 2015 (BSIS program standards) and adapted for Talibon Polytechnic College's BSIS program. It is NOT an official TPC document; TPC's actual registrar prospectus is not publicly available online. Course codes and exact wording are authored for this project.
+BSIS Curriculum Checklist - Year 4 - Second Semester
+Program: Bachelor of Science in Information Systems (BSIS)
+Code Course Title Units Prerequisite(s)
+IS405 Capstone Project 2 3 IS401
+IS406 Practicum / On-the-Job Training 6 IS401
+IS407 Seminars and Field Trips 1 None
+Total units this term: 10
+Prerequisite notes:
+- IS405 Capstone Project 2: requires IS401 (Capstone Project 1).
+- IS406 Practicum / On-the-Job Training: requires IS401 (Capstone Project 1). 486 hours; also requires completion of all Year 1-3 courses.

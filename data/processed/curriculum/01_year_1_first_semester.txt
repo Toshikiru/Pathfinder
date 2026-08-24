@@ -1,0 +1,15 @@
+[SIMULATED DATA] This document is a realistic reconstruction for the Pathfinder capstone project. It is modeled on CHED Memorandum Order No. 25, s. 2015 (BSIS program standards) and adapted for Talibon Polytechnic College's BSIS program. It is NOT an official TPC document; TPC's actual registrar prospectus is not publicly available online. Course codes and exact wording are authored for this project.
+BSIS Curriculum Checklist - Year 1 - First Semester
+Program: Bachelor of Science in Information Systems (BSIS)
+Code Course Title Units Prerequisite(s)
+IS101 Introduction to Computing 3 None
+IS102 Computer Programming 1 (Fundamentals of Programming) 3 None
+GE101 Mathematics in the Modern World 3 None
+GE102 Understanding the Self 3 None
+GE103 Komunikasyon sa Akademikong Filipino 3 None
+PE101 Physical Fitness 2 None
+NSTP101 National Service Training Program 1 3 None
+Total units this term: 20
+Prerequisite notes:
+- IS101 Introduction to Computing: no course prerequisite. No prior programming background assumed.
+- IS102 Computer Programming 1 (Fundamentals of Programming): no course prerequisite. Introduces variables, control structures, and functions.

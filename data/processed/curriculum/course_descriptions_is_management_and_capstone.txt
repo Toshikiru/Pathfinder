@@ -1,0 +1,22 @@
+[SIMULATED DATA] This document is a realistic reconstruction for the Pathfinder capstone project. It is modeled on CHED Memorandum Order No. 25, s. 2015 (BSIS program standards) and adapted for Talibon Polytechnic College's BSIS program. It is NOT an official TPC document; TPC's actual registrar prospectus is not publicly available online. Course codes and exact wording are authored for this project.
+BSIS Course Description Catalog (excerpt)
+IS103 - Fundamentals of Information Systems
+Foundational course distinguishing Information Systems from Computer Science/IT; covers the role of IS in organizations.
+IS203 - Organization and Management Concepts
+Introduces organizational structures, management functions, and decision-making relevant to deploying IS in a business.
+IS303 - Business Process Management
+Covers modeling, analyzing, and improving business processes, and how IS supports process automation.
+IS308 - IS Project Management 1
+Introduces project management fundamentals (scope, schedule, cost) applied to IS/software projects.
+IS402 - IS Project Management 2
+Advanced project management: risk management, stakeholder management, and agile approaches for IS projects.
+IS304 - IS Elective 1: Enterprise Systems
+Elective covering ERP/enterprise system concepts and how large organizations integrate systems across departments.
+IS311 - IS Strategy, Management and Acquisition
+Covers IT governance, sourcing/acquisition decisions, and aligning IS strategy with business strategy.
+IS401 - Capstone Project 1
+First half of the two-term capstone: students form a team, propose a real-world IS project, and complete requirements/design.
+IS405 - Capstone Project 2
+Second half of the capstone: students implement, test, and defend the system proposed in Capstone Project 1.
+IS406 - Practicum / On-the-Job Training
+486-hour supervised work experience in an IS-related role at a partner company or organization.
