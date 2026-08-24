@@ -1,0 +1,33 @@
+[SIMULATED DATA] This document is a realistic reconstruction for the Pathfinder capstone project. It is modeled on CHED Memorandum Order No. 25, s. 2015 (BSIS program standards) and adapted for Talibon Polytechnic College's BSIS program. It is NOT an official TPC document; TPC's actual registrar prospectus is not publicly available online. Course codes and exact wording are authored for this project.
+
+BSIS Program - Enrollment, Prerequisites, and Academic Standing Policy
+
+Prerequisite enforcement: a student may not enroll in a course until every
+prerequisite listed for it in the curriculum checklist has been passed
+(grade of 3.00 or better). Registration will be blocked for any course
+whose prerequisite is missing, failed, or currently "in progress" in the
+same term.
+
+Course load: a regular BSIS student may enroll in a maximum of 24 units per
+regular semester (Year 1-4 Sem 1/Sem 2) and 9 units in the summer term. A
+student on academic probation is capped at 15 units per regular semester
+until good standing is restored.
+
+Academic standing:
+- Good Standing: term GWA of 3.00 or better with no more than one failing
+  grade in the current term.
+- Probation: a student who fails 2 or more courses in a single term, or
+  whose cumulative GWA falls below 3.00, is placed on academic probation
+  for the following term.
+- Dismissal: a student placed on probation for two consecutive terms, or
+  who fails the same required course three times, is subject to academic
+  dismissal from the BSIS program, pending an appeal to the Program Head.
+
+Capstone eligibility: enrollment in IS401 (Capstone Project 1) requires
+completion of IS301 and IS309, plus at least 75% of total curriculum units
+completed. Enrollment in IS406 (Practicum/OJT) requires completion of all
+Year 1-3 courses and IS401.
+
+Add/drop: students may add or drop a course only within the first two (2)
+weeks of a regular semester (first week for the summer term), subject to
+the Registrar's published academic calendar.
