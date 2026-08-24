@@ -1,0 +1,5 @@
+beautifulsoup4==4.15.0
+lxml
+sentence-transformers==6.0.0
+numpy
+python-docx
