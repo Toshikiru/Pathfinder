@@ -11,8 +11,10 @@ a cited, non-hallucinated answer instead of manually cross-referencing a checkli
 ## Checkpoint status
 
 - [x] **Checkpoint 1 — Foundation & Data Pipeline** (Prelim): proposal, dataset,
-      preprocessing, embedding demo. *Complete — see below.*
-- [ ] Checkpoint 2 — Prompt Architecture & Vector Indexing (Midterm)
+      preprocessing, embedding demo. *Complete.*
+- [x] **Checkpoint 2 — Prompt Architecture & Vector Indexing** (Midterm): prompt
+      engineering doc, Gemini API integration, Chroma vector DB, distance metric
+      comparison. *Complete — see below.*
 - [ ] Checkpoint 3 — RAG Orchestration & Working Application (Semi-Final)
 - [ ] Checkpoint 4 — Customization, Deployment & Final Defense (Final)
 
@@ -31,13 +33,21 @@ src/
   00_generate_curriculum_data.py   generates the simulated curriculum/policy documents
   01_extract_raw_text.py           HTML -> raw text (BeautifulSoup)
   02_preprocess.py                 raw text -> cleaned text, prints before/after examples
-  03_generate_embeddings.py        embedding generation + retrieval sanity check
+  03_generate_embeddings.py        embedding generation + retrieval sanity check (CP1 sample)
+  04_setup_vector_db.py            chunks + embeds the FULL corpus into a persistent Chroma index
+  05_distance_metric_comparison.py cosine vs euclidean vs dot product on our own data
+  06_api_integration_demo.py       retrieval + system prompts -> real Gemini API calls
+  prompts.py                       the 4 structured system/instruction prompts
 scripts/
   fill_proposal.py        fills docs/Project_Proposal.docx from the instructor's template
 docs/
   Project_Proposal.docx   Checkpoint 1 deliverable
   Data_Sources.md          full provenance of every document in data/raw
   Reflection_Checkpoint1.md
+  Prompt_Engineering.md            Checkpoint 2 deliverable (quotes real Gemini transcripts)
+  Distance_Metric_Comparison.md    Checkpoint 2 deliverable
+  _api_demo_transcripts.md         raw transcripts referenced by Prompt_Engineering.md
+  _distance_metric_results.json    raw results referenced by Distance_Metric_Comparison.md
 ```
 
 ## Data sources (summary — full detail in [docs/Data_Sources.md](docs/Data_Sources.md))
@@ -60,6 +70,7 @@ docs/
 python3 -m venv .venv
 source .venv/bin/activate   # or .venv\Scripts\activate on Windows
 pip install -r requirements.txt
+cp .env.example .env        # then paste your free Gemini key (aistudio.google.com/apikey)
 ```
 
 ## Running the Checkpoint 1 pipeline
@@ -74,6 +85,20 @@ python3 src/03_generate_embeddings.py        # embeds a sample + prints retrieva
 `sentence-transformers/all-MiniLM-L6-v2` (open-source, local, 384-dim) is used
 for embeddings — no API key required. See the module docstring in
 `03_generate_embeddings.py` for the model choice rationale.
+
+## Running the Checkpoint 2 pipeline
+
+```bash
+python3 src/04_setup_vector_db.py            # builds the full 109-chunk Chroma index, runs a similarity-search demo
+python3 src/05_distance_metric_comparison.py # cosine/euclidean/dot-product comparison -> docs/_distance_metric_results.json
+python3 src/06_api_integration_demo.py       # retrieval + prompts -> real Gemini calls -> docs/_api_demo_transcripts.md
+```
+
+`06_api_integration_demo.py` requires `GEMINI_API_KEY` in `.env` (never
+committed — see `.env.example`). Free key from
+[aistudio.google.com/apikey](https://aistudio.google.com/apikey). The Chroma
+index persists to `data/chroma_db/` (gitignored, regenerable by re-running
+`04_setup_vector_db.py`).
 
 ## Team
 
