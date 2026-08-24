@@ -7,9 +7,18 @@ venv/
 # Downloaded HF model cache if ever pointed locally
 .cache/
 
+# Secrets - never commit API keys
+.env
+
+# Local vector store (regenerable via src/04_setup_vector_db.py)
+data/chroma_db/
+
 # OS
 .DS_Store
 Thumbs.db
+
+# Office lock files
+~$*.docx
 
 # Editors
 .vscode/

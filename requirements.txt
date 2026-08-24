@@ -3,3 +3,6 @@ lxml
 sentence-transformers==6.0.0
 numpy
 python-docx
+chromadb==1.5.9
+google-genai
+python-dotenv
