@@ -1,0 +1,78 @@
+{
+  "What are the prerequisites for Systems Analysis and Design?": {
+    "cosine_top": [
+      "curriculum/course_descriptions_programming_and_systems.txt",
+      "curriculum/04_year_2_second_semester.txt",
+      "curriculum/05_year_3_first_semester.txt"
+    ],
+    "euclidean_top": [
+      "curriculum/course_descriptions_programming_and_systems.txt",
+      "curriculum/04_year_2_second_semester.txt",
+      "curriculum/05_year_3_first_semester.txt"
+    ],
+    "dot_product_top": [
+      "curriculum/course_descriptions_programming_and_systems.txt",
+      "curriculum/04_year_2_second_semester.txt",
+      "curriculum/05_year_3_first_semester.txt"
+    ],
+    "agreement_cosine_vs_euclidean": true,
+    "agreement_cosine_vs_dot": true
+  },
+  "How many units can I enroll in while on academic probation?": {
+    "cosine_top": [
+      "policies/enrollment_prerequisites_and_academic_standing.txt",
+      "policies/enrollment_prerequisites_and_academic_standing.txt",
+      "policies/enrollment_prerequisites_and_academic_standing.txt"
+    ],
+    "euclidean_top": [
+      "policies/enrollment_prerequisites_and_academic_standing.txt",
+      "policies/enrollment_prerequisites_and_academic_standing.txt",
+      "policies/enrollment_prerequisites_and_academic_standing.txt"
+    ],
+    "dot_product_top": [
+      "policies/enrollment_prerequisites_and_academic_standing.txt",
+      "policies/enrollment_prerequisites_and_academic_standing.txt",
+      "policies/enrollment_prerequisites_and_academic_standing.txt"
+    ],
+    "agreement_cosine_vs_euclidean": true,
+    "agreement_cosine_vs_dot": true
+  },
+  "Who is the program head of BSIS?": {
+    "cosine_top": [
+      "tpc_website/academics_bachelor-of-science-in-information-systems.txt",
+      "tpc_website/academics.txt",
+      "curriculum/03_year_2_first_semester.txt"
+    ],
+    "euclidean_top": [
+      "tpc_website/academics_bachelor-of-science-in-information-systems.txt",
+      "tpc_website/academics.txt",
+      "curriculum/03_year_2_first_semester.txt"
+    ],
+    "dot_product_top": [
+      "tpc_website/academics_bachelor-of-science-in-information-systems.txt",
+      "tpc_website/academics.txt",
+      "curriculum/03_year_2_first_semester.txt"
+    ],
+    "agreement_cosine_vs_euclidean": true,
+    "agreement_cosine_vs_dot": true
+  },
+  "What GWA do I need for Latin honors?": {
+    "cosine_top": [
+      "policies/grading_system_and_gwa_policy.txt",
+      "policies/grading_system_and_gwa_policy.txt",
+      "tpc_website/admission.txt"
+    ],
+    "euclidean_top": [
+      "policies/grading_system_and_gwa_policy.txt",
+      "policies/grading_system_and_gwa_policy.txt",
+      "tpc_website/admission.txt"
+    ],
+    "dot_product_top": [
+      "policies/grading_system_and_gwa_policy.txt",
+      "policies/grading_system_and_gwa_policy.txt",
+      "tpc_website/admission.txt"
+    ],
+    "agreement_cosine_vs_euclidean": true,
+    "agreement_cosine_vs_dot": true
+  }
+}
