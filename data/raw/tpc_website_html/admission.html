@@ -1,0 +1,1735 @@
+<!doctype html>
+<html lang="en" class="overflow-x-clip">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="csrf-token" content="rnDB77Nsb1FFs3pPadOEaCBX0k1mhIVwIYlO5wVv">
+    <title>Admission</title>
+
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.tpc.edu.ph/images/TPC-Logo.png">
+    <link rel="shortcut icon" href="https://www.tpc.edu.ph/images/TPC-Logo.png">
+
+    <link rel="preload" as="image" href="https://www.tpc.edu.ph/images/TPC-Logo.png">
+
+    <script>window._tpcStorageBase = 'https://www.tpc.edu.ph/storage';</script>
+
+    <script>
+            </script>
+
+    <link rel="preload" as="style" href="https://www.tpc.edu.ph/build/assets/app-BQaOP065.css" /><link rel="modulepreload" as="script" href="https://www.tpc.edu.ph/build/assets/app-DBjI20tB.js" /><link rel="stylesheet" href="https://www.tpc.edu.ph/build/assets/app-BQaOP065.css" /><script type="module" src="https://www.tpc.edu.ph/build/assets/app-DBjI20tB.js"></script>
+    </head>
+
+<body class="font-sans text-tpc-ink bg-white overflow-x-clip">
+
+    <header class="sticky top-0 z-50 bg-white overflow-x-clip border-b border-gray-100 shadow-sm">
+
+    <div class="mx-auto px-4 py-3 flex items-center justify-between gap-4 sm:relative sm:flex sm:items-center sm:justify-center sm:min-h-[56px]">
+
+    
+    <a href="https://www.tpc.edu.ph" class="flex items-center gap-3 group min-w-0 shrink-0 sm:absolute sm:left-4" data-tpc-link>
+        <img src="https://www.tpc.edu.ph/images/TPC-Logo.png" alt="TPC Logo" class="h-10 w-auto" loading="eager" decoding="async">
+        <div class="min-w-0">
+            <p class="text-base font-bold text-tpc-primary leading-tight tracking-tight truncate">Talibon Polytechnic College</p>
+            <p class="text-[11px] text-gray-500 tracking-widest uppercase hidden sm:block">Official Website</p>
+        </div>
+    </a>
+
+    
+    <nav class="hidden sm:flex sm:absolute sm:left-1/2 sm:-translate-x-1/2 justify-center items-center gap-1" aria-label="Main navigation">
+        
+        <a id="nav-home" data-tpc-link class="tpc-navlink px-3 py-2 text-sm font-semibold transition " href="https://www.tpc.edu.ph" >Home</a>
+        <a id="nav-about" data-tpc-link class="tpc-navlink px-3 py-2 text-sm font-semibold transition " href="https://www.tpc.edu.ph#about">About</a>
+        <a data-tpc-link class="tpc-navlink px-3 py-2 text-sm font-semibold transition " href="https://www.tpc.edu.ph/academics" >Academics</a>
+
+                    <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false" @keydown.escape.window="open = false">
+                <button type="button" @click="open = !open"
+                        class="tpc-navlink inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold transition "
+                        :aria-expanded="open.toString()">
+                    Services
+                    <svg class="h-3.5 w-3.5 transition-transform duration-200" :class="open ? 'rotate-180' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                    </svg>
+                </button>
+                <div x-cloak x-show="open"
+                     x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-1 scale-[0.98]" x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+                     x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+                     class="absolute left-0 top-full pt-1 w-64 z-50">
+                    <div class="rounded-2xl border border-gray-200 bg-white shadow-xl shadow-black/10 ring-1 ring-black/5 overflow-hidden">
+                        <div class="bg-tpc-primary px-4 py-2.5">
+                            <p class="text-[10px] font-bold uppercase tracking-widest text-white/70">Our Services</p>
+                        </div>
+                        <div class="py-1.5">
+                                                            <a href="https://www.tpc.edu.ph/services/guidance-and-counseling-center" data-tpc-link data-service-href="https://www.tpc.edu.ph/services/guidance-and-counseling-center"
+                                   class="group flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-tpc-primary/6 hover:text-tpc-primary transition ">
+                                    <span data-service-dot class="h-1.5 w-1.5 rounded-full bg-tpc-primary/30 shrink-0 group-hover:bg-tpc-primary transition"></span>
+                                    <span class="truncate">Guidance And Counseling Center</span>
+                                    <svg class="ml-auto h-3.5 w-3.5 shrink-0 text-gray-300 group-hover:text-tpc-primary/50 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </a>
+                                                            <a href="https://www.tpc.edu.ph/services/registrars-office" data-tpc-link data-service-href="https://www.tpc.edu.ph/services/registrars-office"
+                                   class="group flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-tpc-primary/6 hover:text-tpc-primary transition ">
+                                    <span data-service-dot class="h-1.5 w-1.5 rounded-full bg-tpc-primary/30 shrink-0 group-hover:bg-tpc-primary transition"></span>
+                                    <span class="truncate">Registrar’s Office</span>
+                                    <svg class="ml-auto h-3.5 w-3.5 shrink-0 text-gray-300 group-hover:text-tpc-primary/50 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </a>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        
+        <a data-tpc-link class="tpc-navlink px-3 py-2 text-sm font-semibold transition tpc-active" href="https://www.tpc.edu.ph/admission"  aria-current="page" >Admission</a>
+        <a data-tpc-link class="tpc-navlink px-3 py-2 text-sm font-semibold transition " href="https://www.tpc.edu.ph/news" >News</a>
+        <a data-tpc-link class="tpc-navlink px-3 py-2 text-sm font-semibold transition " href="https://www.tpc.edu.ph/contact" >Contact</a>
+    </nav>
+
+    
+    <div class="flex items-center gap-2 sm:absolute sm:right-4">
+
+        
+        <div class="hidden sm:block relative shrink-0"
+             x-data="tpcSearch()"
+             @keydown.escape.window="query = ''; results = []; activeIndex = -1;">
+
+            
+            <div class="flex items-center gap-2 h-9 px-3 rounded-full border transition-all duration-300 ease-out cursor-text"
+                :class="query.length > 0 || document.activeElement === $refs.input
+                    ? 'w-56 border-tpc-primary/60 bg-white ring-2 ring-tpc-primary/12 shadow-sm'
+                    : 'w-44 border-tpc-primary/40 bg-tpc-primary/8 hover:border-tpc-primary/50 hover:bg-tpc-primary/12'"
+                @click="$refs.input.focus()">
+
+                <svg class="h-3.5 w-3.5 shrink-0 transition-colors duration-200"
+                    :class="query.length > 0 ? 'text-tpc-primary' : 'text-tpc-primary/60'"
+                     fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                    <circle cx="11" cy="11" r="7"/>
+                    <path stroke-linecap="round" d="M20 20l-3-3"/>
+                </svg>
+
+                <input x-ref="input"
+                       id="tpc-search-desktop"
+                       name="search"
+                       type="text"
+                       placeholder="Search…"
+                       x-model="query"
+                       @input="search()"
+                       @keydown.arrow-down.prevent="moveDown()"
+                       @keydown.arrow-up.prevent="moveUp()"
+                       @keydown.enter.prevent="selectActive()"
+                       class="flex-1 bg-transparent text-xs text-gray-700 placeholder-gray-400/70 outline-none border-none focus:ring-0 min-w-0 p-0"
+                       autocomplete="off"
+                       aria-label="Search site"
+                       aria-autocomplete="list"
+                       :aria-activedescendant="activeIndex >= 0 ? 'tpc-sr-' + activeIndex : null"/>
+
+                <button x-show="query.length > 0" x-cloak type="button"
+                        @click.stop="query = ''; results = []; activeIndex = -1; $refs.input.focus()"
+                        class="flex items-center justify-center h-4 w-4 rounded-full bg-gray-200/80 hover:bg-gray-300 transition shrink-0"
+                        aria-label="Clear search">
+                    <svg class="h-2.5 w-2.5 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+
+            
+            <div x-show="results.length > 0" x-cloak
+                 x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-1 scale-[0.98]" x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+                 x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-[0.98]"
+                 class="absolute right-0 top-full mt-2 w-72 z-50 rounded-2xl border border-gray-200/80 bg-white shadow-xl shadow-black/8 ring-1 ring-black/4 overflow-hidden"
+                 role="listbox" aria-label="Search results">
+
+                <div class="px-4 py-2.5 border-b border-gray-100 flex items-center justify-between">
+                    <p class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Results</p>
+                    <p class="text-[10px] text-gray-400" x-text="results.length + ' found'"></p>
+                </div>
+
+                <div class="py-1.5 max-h-72 overflow-y-auto">
+                    <template x-for="(item, i) in results" :key="i">
+                        <button type="button" :id="'tpc-sr-' + i"
+                                @click="go(item)" @mouseenter="activeIndex = i"
+                                role="option" :aria-selected="activeIndex === i"
+                                class="w-full flex items-center gap-3 px-4 py-2.5 text-left transition-colors"
+                                :class="activeIndex === i ? 'bg-tpc-primary/8 text-tpc-primary' : 'text-gray-600 hover:bg-gray-50/80'">
+
+                            <span class="flex items-center justify-center h-6 w-6 rounded-lg shrink-0 transition-colors"
+                                  :class="activeIndex === i ? 'bg-tpc-primary/12' : 'bg-gray-100'">
+                                <svg class="h-3.5 w-3.5 transition-colors"
+                                     :class="activeIndex === i ? 'text-tpc-primary' : 'text-gray-400'"
+                                     fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="7"/>
+                                    <path stroke-linecap="round" d="M20 20l-3-3"/>
+                                </svg>
+                            </span>
+
+                            <div class="min-w-0 flex-1">
+                                <p class="text-xs font-semibold truncate leading-snug" x-text="item.label"></p>
+                                <p class="text-[10px] leading-snug mt-0.5 transition-colors"
+                                   :class="activeIndex === i ? 'text-tpc-primary/60' : 'text-gray-400'"
+                                   x-text="item.page"></p>
+                            </div>
+
+                            <svg class="h-3.5 w-3.5 shrink-0 transition-colors"
+                                 :class="activeIndex === i ? 'text-tpc-primary/50' : 'text-gray-300'"
+                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </template>
+                </div>
+
+                <div class="px-4 py-2 border-t border-gray-100 flex items-center gap-3">
+                    <span class="text-[10px] text-gray-400">↑↓ navigate</span>
+                    <span class="text-gray-200 select-none">·</span>
+                    <span class="text-[10px] text-gray-400">Enter to go</span>
+                    <span class="text-gray-200 select-none">·</span>
+                    <span class="text-[10px] text-gray-400">Esc to close</span>
+                </div>
+            </div>
+
+            
+            <div x-show="query.length > 0 && results.length === 0" x-cloak
+                 x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0"
+                 class="absolute right-0 top-full mt-2 w-64 z-50 rounded-2xl border border-gray-200/80 bg-white shadow-xl shadow-black/8 overflow-hidden">
+                <div class="px-4 py-4 text-center">
+                    <div class="flex items-center justify-center h-8 w-8 rounded-full bg-gray-100 mx-auto mb-2">
+                        <svg class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="7"/>
+                            <path stroke-linecap="round" d="M20 20l-3-3"/>
+                        </svg>
+                    </div>
+                    <p class="text-xs font-medium text-gray-600">No results for "<span x-text="query" class="text-tpc-primary"></span>"</p>
+                    <p class="text-[10px] text-gray-400 mt-0.5">Try a page name or section</p>
+                </div>
+            </div>
+        </div>
+
+        
+        
+        
+        <div class="flex items-center gap-2 sm:hidden">
+            <div x-data="{ open: false }" @close-hamburger.window="open = false">
+
+                <button type="button" @click="open = !open"
+                        class="relative inline-flex items-center justify-center w-9 h-9 rounded-lg text-tpc-primary transition-all duration-200"
+                        :class="open ? 'bg-tpc-primary text-white shadow-md' : 'bg-tpc-primary/8 hover:bg-tpc-primary/15'"
+                        aria-label="Toggle menu">
+                    <svg x-show="!open" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h10M4 18h16"/>
+                    </svg>
+                    <svg x-show="open" x-cloak class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+
+                <div x-cloak x-show="open"
+                     x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                     x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+                     class="fixed inset-0 z-40 bg-black/30 backdrop-blur-[2px]"
+                     @click="open = false" aria-hidden="true"></div>
+
+                <div x-cloak x-show="open"
+                     x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-2 scale-[0.98]" x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+                     x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0 scale-100" x-transition:leave-end="opacity-0 -translate-y-2 scale-[0.98]"
+                     class="absolute left-0 right-0 top-full z-50 px-3 pt-2 pb-3"
+                     @click.outside="open = false">
+
+                    <nav class="rounded-2xl bg-white shadow-xl shadow-black/10 ring-1 ring-black/5 overflow-hidden">
+
+                        <div class="bg-tpc-primary px-4 py-3 flex items-center gap-2">
+                            <svg class="h-4 w-4 text-white/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                            </svg>
+                            <span class="text-xs font-semibold text-white/80 uppercase tracking-widest">Navigation</span>
+                        </div>
+
+                        
+                        
+                        <div class="px-2 pt-2.5 pb-1" x-data="tpcSearch()">
+                            <div class="flex items-center gap-2 rounded-xl border px-3 h-10 transition-all duration-200"
+                                 :class="query.length > 0
+                                     ? 'border-tpc-primary/50 bg-white ring-2 ring-tpc-primary/10'
+                                     : 'border-gray-200 bg-gray-50/80 hover:border-gray-300'">
+                                <svg class="h-4 w-4 shrink-0 transition-colors duration-200"
+                                     :class="query.length > 0 ? 'text-tpc-primary' : 'text-gray-400'"
+                                     fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="7"/>
+                                    <path stroke-linecap="round" d="M20 20l-3-3"/>
+                                </svg>
+                                <input x-ref="input"
+                                       id="tpc-search-mobile"
+                                       name="search"
+                                       type="text"
+                                       placeholder="Search pages & sections…"
+                                       x-model="query"
+                                       @input="search()"
+                                       @keydown.arrow-down.prevent="moveDown()"
+                                       @keydown.arrow-up.prevent="moveUp()"
+                                       @keydown.enter.prevent="selectActive()"
+                                       class="flex-1 bg-transparent text-sm text-gray-700 placeholder-gray-400/70 outline-none border-none focus:ring-0 p-0"
+                                       autocomplete="off"
+                                       aria-label="Search site"/>
+                                <button type="button" x-show="query.length > 0" x-cloak @click="close()"
+                                        class="flex items-center justify-center h-5 w-5 rounded-full bg-gray-200/80 hover:bg-gray-300 transition shrink-0"
+                                        aria-label="Clear search">
+                                    <svg class="h-3 w-3 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div x-show="results.length > 0"
+                                 x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0"
+                                 class="mt-1.5 max-h-52 overflow-y-auto rounded-xl border border-gray-200/80 bg-white shadow-sm">
+                                <template x-for="(item, i) in results" :key="i">
+                                    <button type="button" @click="go(item)" @mouseenter="activeIndex = i"
+                                            class="w-full flex items-center gap-3 px-3 py-2.5 text-left transition-colors border-b border-gray-100/80 last:border-0"
+                                            :class="activeIndex === i ? 'bg-tpc-primary/8 text-tpc-primary' : 'text-gray-600 hover:bg-gray-50'">
+                                        <span class="flex items-center justify-center h-6 w-6 rounded-lg shrink-0 transition-colors"
+                                              :class="activeIndex === i ? 'bg-tpc-primary/12' : 'bg-gray-100'">
+                                            <svg class="h-3.5 w-3.5 transition-colors"
+                                                 :class="activeIndex === i ? 'text-tpc-primary' : 'text-gray-400'"
+                                                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                <circle cx="11" cy="11" r="7"/>
+                                                <path stroke-linecap="round" d="M20 20l-3-3"/>
+                                            </svg>
+                                        </span>
+                                        <div class="min-w-0 flex-1">
+                                            <p class="text-sm font-semibold truncate leading-snug" x-text="item.label"></p>
+                                            <p class="text-xs leading-snug mt-0.5 transition-colors"
+                                               :class="activeIndex === i ? 'text-tpc-primary/60' : 'text-gray-400'"
+                                               x-text="item.page"></p>
+                                        </div>
+                                        <svg class="h-3.5 w-3.5 shrink-0 transition-colors"
+                                             :class="activeIndex === i ? 'text-tpc-primary/50' : 'text-gray-300'"
+                                             fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                                        </svg>
+                                    </button>
+                                </template>
+                            </div>
+
+                            <div x-show="query.length > 0 && results.length === 0"
+                                 class="mt-1.5 px-4 py-3 text-center rounded-xl border border-gray-200/80 bg-white">
+                                <p class="text-sm font-medium text-gray-600">No results for "<span x-text="query" class="text-tpc-primary"></span>"</p>
+                                <p class="text-xs text-gray-400 mt-0.5">Try a page name or section</p>
+                            </div>
+                        </div>
+
+                        <div class="p-2">
+                                                            <a id="mob-home" data-tpc-link href="https://www.tpc.edu.ph"
+                                   @click="open = false"                                    class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-150 group text-gray-700 hover:bg-tpc-primary/8 hover:text-tpc-primary">
+                                    <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-lg transition-all duration-150 bg-gray-100 text-gray-500 group-hover:bg-tpc-primary/12 group-hover:text-tpc-primary">
+                                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                                    </span>
+                                    <span class="flex-1">Home</span>
+                                                                            <svg class="h-3.5 w-3.5 text-gray-300 group-hover:text-tpc-primary/40 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                                                                    </a>
+                                                            <a id="mob-about" data-tpc-link href="https://www.tpc.edu.ph#about"
+                                   @click="open = false"                                    class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-150 group text-gray-700 hover:bg-tpc-primary/8 hover:text-tpc-primary">
+                                    <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-lg transition-all duration-150 bg-gray-100 text-gray-500 group-hover:bg-tpc-primary/12 group-hover:text-tpc-primary">
+                                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                    </span>
+                                    <span class="flex-1">About</span>
+                                                                            <svg class="h-3.5 w-3.5 text-gray-300 group-hover:text-tpc-primary/40 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                                                                    </a>
+                                                            <a id="mob-academics" data-tpc-link href="https://www.tpc.edu.ph/academics"
+                                   @click="open = false"                                    class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-150 group text-gray-700 hover:bg-tpc-primary/8 hover:text-tpc-primary">
+                                    <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-lg transition-all duration-150 bg-gray-100 text-gray-500 group-hover:bg-tpc-primary/12 group-hover:text-tpc-primary">
+                                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                                    </span>
+                                    <span class="flex-1">Academics</span>
+                                                                            <svg class="h-3.5 w-3.5 text-gray-300 group-hover:text-tpc-primary/40 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                                                                    </a>
+                            
+                                                            <div x-data="{ servOpen: false }" x-init="servOpen = false">
+                                    <button type="button" id="mob-services" @click="servOpen = !servOpen"
+                                            class="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-150 group text-gray-700 hover:bg-tpc-primary/8 hover:text-tpc-primary">
+                                        <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-lg transition-all duration-150 bg-gray-100 text-gray-500 group-hover:bg-tpc-primary/12 group-hover:text-tpc-primary">
+                                            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z"/>
+                                            </svg>
+                                        </span>
+                                        <span class="flex-1 text-left">Services</span>
+                                        <svg class="h-3.5 w-3.5 transition-transform duration-200" :class="servOpen ? 'rotate-180' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                                        </svg>
+                                    </button>
+                                    <div x-show="servOpen"
+                                         x-transition:enter="transition ease-out duration-150" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0"
+                                         x-transition:leave="transition ease-in duration-100" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-1"
+                                         class="mt-1 ml-10 space-y-0.5">
+                                                                                    <a href="https://www.tpc.edu.ph/services/guidance-and-counseling-center" data-tpc-link @click="open = false"
+                                               data-service-href="https://www.tpc.edu.ph/services/guidance-and-counseling-center"
+                                               class="flex items-center gap-2 px-3 py-2 rounded-xl text-sm text-gray-600 hover:bg-tpc-primary/8 hover:text-tpc-primary transition group">
+                                                <span data-service-dot class="h-1.5 w-1.5 rounded-full bg-tpc-primary/30 group-hover:bg-tpc-primary shrink-0 transition"></span>
+                                                Guidance And Counseling Center
+                                            </a>
+                                                                                    <a href="https://www.tpc.edu.ph/services/registrars-office" data-tpc-link @click="open = false"
+                                               data-service-href="https://www.tpc.edu.ph/services/registrars-office"
+                                               class="flex items-center gap-2 px-3 py-2 rounded-xl text-sm text-gray-600 hover:bg-tpc-primary/8 hover:text-tpc-primary transition group">
+                                                <span data-service-dot class="h-1.5 w-1.5 rounded-full bg-tpc-primary/30 group-hover:bg-tpc-primary shrink-0 transition"></span>
+                                                Registrar’s Office
+                                            </a>
+                                                                            </div>
+                                </div>
+                            
+                                                            <a id="mob-admission" data-tpc-link href="https://www.tpc.edu.ph/admission"
+                                   @click="open = false"  aria-current="page"                                    class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-150 group bg-tpc-primary text-white shadow-sm">
+                                    <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-lg transition-all duration-150 bg-white/20 text-white">
+                                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+                                    </span>
+                                    <span class="flex-1">Admission</span>
+                                                                            <span class="w-1.5 h-1.5 rounded-full bg-white/60"></span>
+                                                                    </a>
+                                                            <a id="mob-news" data-tpc-link href="https://www.tpc.edu.ph/news"
+                                   @click="open = false"                                    class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-150 group text-gray-700 hover:bg-tpc-primary/8 hover:text-tpc-primary">
+                                    <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-lg transition-all duration-150 bg-gray-100 text-gray-500 group-hover:bg-tpc-primary/12 group-hover:text-tpc-primary">
+                                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+                                    </span>
+                                    <span class="flex-1">News</span>
+                                                                            <svg class="h-3.5 w-3.5 text-gray-300 group-hover:text-tpc-primary/40 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                                                                    </a>
+                                                            <a id="mob-contact" data-tpc-link href="https://www.tpc.edu.ph/contact"
+                                   @click="open = false"                                    class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all duration-150 group text-gray-700 hover:bg-tpc-primary/8 hover:text-tpc-primary">
+                                    <span class="flex-shrink-0 flex items-center justify-center w-7 h-7 rounded-lg transition-all duration-150 bg-gray-100 text-gray-500 group-hover:bg-tpc-primary/12 group-hover:text-tpc-primary">
+                                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                                    </span>
+                                    <span class="flex-1">Contact</span>
+                                                                            <svg class="h-3.5 w-3.5 text-gray-300 group-hover:text-tpc-primary/40 transition" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                                                                    </a>
+                                                    </div>
+
+                                            </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+    (function () {
+        var TPC_SEARCH_ITEMS = [{"label":"About","url":"https:\/\/www.tpc.edu.ph#about","page":"Home"},{"label":"Vision","url":"https:\/\/www.tpc.edu.ph#vision","page":"Home"},{"label":"Mission","url":"https:\/\/www.tpc.edu.ph#mission","page":"Home"},{"label":"TPC Updates","url":"https:\/\/www.tpc.edu.ph#tpc-updates","page":"Home"},{"label":"Latest News \u0026 Announcements","url":"https:\/\/www.tpc.edu.ph#latest-news","page":"Home"},{"label":"Academic Programs","url":"https:\/\/www.tpc.edu.ph#academic-programs","page":"Home"},{"label":"All Programs","url":"https:\/\/www.tpc.edu.ph\/academics#all-programs","page":"Academics"},{"label":"Organizational Chart","url":"https:\/\/www.tpc.edu.ph\/org-chart","page":"Academics"},{"label":"Enrollment \u0026 Requirements","url":"https:\/\/www.tpc.edu.ph\/admission","page":"Admission"},{"label":"Admission Requirements","url":"https:\/\/www.tpc.edu.ph\/admission#admission-requirements","page":"Admission"},{"label":"Enrollment Process","url":"https:\/\/www.tpc.edu.ph\/admission#enrollment-process","page":"Admission"},{"label":"Office Hours","url":"https:\/\/www.tpc.edu.ph\/admission#office-hours","page":"Admission"},{"label":"News \u0026 Announcements","url":"https:\/\/www.tpc.edu.ph\/news","page":"News"},{"label":"Latest Posts","url":"https:\/\/www.tpc.edu.ph\/news#latest-posts","page":"News"},{"label":"Get in Touch","url":"https:\/\/www.tpc.edu.ph\/contact#get-in-touch","page":"Contact"},{"label":"Contact","url":"https:\/\/www.tpc.edu.ph\/contact","page":"Contact"},{"label":"Send a Message","url":"https:\/\/www.tpc.edu.ph\/contact#send-message","page":"Contact"},{"label":"Contact Information","url":"https:\/\/www.tpc.edu.ph\/contact#contact-information","page":"Contact"},{"label":"Campus Map","url":"https:\/\/www.tpc.edu.ph\/contact#campus-map","page":"Contact"}];
+
+        function tpcSearch() {
+            return {
+                expanded: false,
+                query: '',
+                results: [],
+                activeIndex: -1,
+
+                expand() {
+                    this.expanded = true;
+                    this.$nextTick(() => { if (this.$refs.input) this.$refs.input.focus(); });
+                },
+
+                close() {
+                    this.expanded = false;
+                    this.query = '';
+                    this.results = [];
+                    this.activeIndex = -1;
+                },
+
+                search() {
+                    var q = this.query.trim().toLowerCase();
+                    this.activeIndex = -1;
+                    if (!q) { this.results = []; return; }
+                    this.results = TPC_SEARCH_ITEMS.filter(function (item) {
+                        return item.label.toLowerCase().indexOf(q) !== -1
+                            || item.page.toLowerCase().indexOf(q) !== -1;
+                    });
+                },
+
+                moveDown() {
+                    if (this.results.length === 0) return;
+                    this.activeIndex = (this.activeIndex + 1) % this.results.length;
+                },
+
+                moveUp() {
+                    if (this.results.length === 0) return;
+                    this.activeIndex = (this.activeIndex - 1 + this.results.length) % this.results.length;
+                },
+
+                selectActive() {
+                    var idx = this.activeIndex >= 0 ? this.activeIndex : (this.results.length === 1 ? 0 : -1);
+                    if (idx >= 0) this.go(this.results[idx]);
+                },
+
+                go(item) {
+                    this.close();
+                    window.dispatchEvent(new CustomEvent('close-hamburger'));
+                    var url = item.url;
+                    var hashIdx = url.indexOf('#');
+
+                    if (hashIdx === -1) {
+                        if (typeof pjaxNavigate === 'function') pjaxNavigate(url);
+                        else window.location.href = url;
+                        return;
+                    }
+
+                    var base   = url.substring(0, hashIdx);
+                    var anchor = url.substring(hashIdx + 1);
+                    var currentBase = window.location.origin + window.location.pathname;
+                    var normalise = function (s) { return s.replace(/\/$/, ''); };
+
+                    if (normalise(currentBase) === normalise(base)) {
+                        tpcScrollToAnchor(anchor);
+                    } else {
+                        sessionStorage.setItem('tpc_scroll_to', anchor);
+                        if (typeof pjaxNavigate === 'function') pjaxNavigate(base);
+                        else window.location.href = base;
+                    }
+                }
+            };
+        }
+
+        window.tpcSearch = tpcSearch;
+
+        function tpcScrollToAnchor(anchor) {
+            var el = document.getElementById(anchor);
+            if (!el) el = document.querySelector('[data-section="' + anchor + '"]');
+            if (!el) {
+                var words = anchor.replace(/-/g, ' ').toLowerCase();
+                var headings = document.querySelectorAll('h1, h2, h3, h4, section');
+                for (var i = 0; i < headings.length; i++) {
+                    if (headings[i].textContent.trim().toLowerCase().indexOf(words) !== -1) { el = headings[i]; break; }
+                }
+            }
+            if (el) {
+                var headerHeight = document.querySelector('header') ? document.querySelector('header').offsetHeight : 80;
+                var top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 16;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var anchor = sessionStorage.getItem('tpc_scroll_to');
+            if (anchor) {
+                sessionStorage.removeItem('tpc_scroll_to');
+                setTimeout(function () { tpcScrollToAnchor(anchor); }, 300);
+            }
+        });
+
+        window.tpcScrollToAnchor = tpcScrollToAnchor;
+    })();
+    </script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const homeLinks = document.querySelectorAll('[id="nav-home"], [id="mob-home"]');
+        homeLinks.forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                const isOnHome = window.location.pathname === '/'
+                    || window.location.pathname === '/home'
+                    || window.location.hash !== '';
+                if (isOnHome) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    history.replaceState(null, '', window.location.pathname);
+                }
+            });
+        });
+        var header = document.querySelector('header');
+        var panel  = document.querySelector('[data-mob-search-panel]');
+        if (header && panel) panel.style.top = header.offsetHeight + 'px';
+    });
+    </script>
+</header>
+
+    <div id="tpc-content" class="relative tpc-prose min-h-screen flex flex-col">
+        <main class="flex-1">
+            
+    
+    <section class="relative overflow-hidden bg-tpc-secondary">
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0"
+             style="background: radial-gradient(ellipse at 70% 50%, rgba(255,255,255,0.06) 0%, transparent 60%),
+                                radial-gradient(ellipse at 20% 80%, rgba(0,0,0,0.15) 0%, transparent 50%)"></div>
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-[0.04]"
+             style="background-image: linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px),
+                                      linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px);
+                    background-size: 40px 40px;"></div>
+        <div class="relative mx-auto max-w-4xl px-4 pt-10 pb-16 sm:pt-14 sm:pb-20">
+            <div class="flex flex-col items-center text-center">
+                <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+                    Enrollment &amp; Requirements
+                </h1>
+                <p class="mt-3 max-w-lg text-sm text-white/60 leading-relaxed">
+                    Learn the enrollment steps and prepare the needed documents to become a student of Talibon Polytechnic College.
+                </p>
+                <div class="mt-6 flex flex-wrap justify-center gap-3">
+                    <a href="#requirements" data-scroll-btn id="btn-requirements"
+                    class="inline-flex items-center justify-center rounded-full border-2 border-white bg-white px-5 py-2.5 text-sm font-bold text-tpc-primary transition-all duration-200">
+                        View Requirements
+                    </a>
+                    <a href="#process" data-scroll-btn id="btn-process"
+                    class="inline-flex items-center justify-center rounded-full border-2 border-white/90 bg-black/20 backdrop-blur-sm px-5 py-2.5 text-sm font-bold text-white transition-all duration-200">
+                        Enrollment Process
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0">
+            <svg viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-8 sm:h-12">
+                <path d="M0 48 C480 0 960 0 1440 48 L1440 48 L0 48 Z" fill="#f9fafb"/>
+            </svg>
+        </div>
+    </section>
+
+    
+    <section class="bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 py-10 sm:py-14">
+            <div class="grid gap-6 sm:gap-8 lg:grid-cols-3 lg:items-start">
+
+                
+                <div class="lg:col-span-2 space-y-6 sm:space-y-8">
+
+                    
+                                            <div id="requirements" class="scroll-mt-20 sm:scroll-mt-24">
+                            <span id="admission-requirements" class="block -mt-24 pt-24 invisible absolute"></span>
+                            <div class="flex items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
+                                <span class="block h-5 w-1.5 bg-tpc-primary rounded-sm shrink-0"></span>
+                                <h2 class="text-[10px] sm:text-xs font-bold tracking-widest text-tpc-primary uppercase">Admission Requirements</h2>
+                                <div class="flex-1 h-px bg-gray-200"></div>
+                            </div>
+                            <p class="text-xs sm:text-sm text-gray-500 mb-4 sm:mb-5">Bring original copies and photocopies as applicable.</p>
+                            <div class="grid gap-4 sm:gap-5 sm:grid-cols-2">
+                                                                                                                                                    <div class="bg-white rounded-2xl border border-gray-100 shadow-md overflow-hidden">
+                                            <div class="p-4 sm:p-6">
+                                                <p class="text-[10px] sm:text-[11px] font-bold tracking-widest text-tpc-primary uppercase mb-3 sm:mb-4">For Freshmen</p>
+                                                <ul class="space-y-2.5 sm:space-y-3">
+                                                                                                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                                            <span class="mt-1.5 h-2 w-2 rounded-full bg-tpc-primary shrink-0"></span>
+                                                            Grade 12 Report Card/Form 137 with at least 2nd quarter grade (Original)
+                                                        </li>
+                                                                                                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                                            <span class="mt-1.5 h-2 w-2 rounded-full bg-tpc-primary shrink-0"></span>
+                                                            PSA Birth Certificate (Original)
+                                                        </li>
+                                                                                                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                                            <span class="mt-1.5 h-2 w-2 rounded-full bg-tpc-primary shrink-0"></span>
+                                                            1 Long Brown Envelope
+                                                        </li>
+                                                                                                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                                            <span class="mt-1.5 h-2 w-2 rounded-full bg-tpc-primary shrink-0"></span>
+                                                            1 Long White Folder
+                                                        </li>
+                                                                                                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                                            <span class="mt-1.5 h-2 w-2 rounded-full bg-tpc-primary shrink-0"></span>
+                                                            2pcs 2x2 Picture (with name &amp; course indicated at the back)
+                                                        </li>
+                                                                                                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                                            <span class="mt-1.5 h-2 w-2 rounded-full bg-tpc-primary shrink-0"></span>
+                                                            Entrance Exam Result
+                                                        </li>
+                                                                                                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                                            <span class="mt-1.5 h-2 w-2 rounded-full bg-tpc-primary shrink-0"></span>
+                                                            Good Moral Certificate
+                                                        </li>
+                                                                                                    </ul>
+                                            </div>
+                                        </div>
+                                                                                                                                                                                        <div class="bg-white rounded-2xl border border-gray-100 shadow-md overflow-hidden">
+                                            <div class="p-4 sm:p-6">
+                                                <p class="text-[10px] sm:text-[11px] font-bold tracking-widest text-tpc-primary uppercase mb-3 sm:mb-4">For Transferees</p>
+                                                <ul class="space-y-2.5 sm:space-y-3">
+                                                                                                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                                            <span class="mt-1.5 h-2 w-2 rounded-full bg-tpc-primary shrink-0"></span>
+                                                            Transfer of Credentials (Hon. Dismissal &amp; TOR) (Original)
+                                                        </li>
+                                                                                                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                                            <span class="mt-1.5 h-2 w-2 rounded-full bg-tpc-primary shrink-0"></span>
+                                                            PSA Birth Certificate (Original)
+                                                        </li>
+                                                                                                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                                            <span class="mt-1.5 h-2 w-2 rounded-full bg-tpc-primary shrink-0"></span>
+                                                            1 Long Brown Envelope
+                                                        </li>
+                                                                                                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                                            <span class="mt-1.5 h-2 w-2 rounded-full bg-tpc-primary shrink-0"></span>
+                                                            1 Long White Folder
+                                                        </li>
+                                                                                                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                                            <span class="mt-1.5 h-2 w-2 rounded-full bg-tpc-primary shrink-0"></span>
+                                                            2pcs 2x2 Picture (with name &amp; course indicated at the back)
+                                                        </li>
+                                                                                                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                                            <span class="mt-1.5 h-2 w-2 rounded-full bg-tpc-primary shrink-0"></span>
+                                                            Entrance Exam Result
+                                                        </li>
+                                                                                                            <li class="flex items-start gap-3 text-xs sm:text-sm text-gray-700">
+                                                            <span class="mt-1.5 h-2 w-2 rounded-full bg-tpc-primary shrink-0"></span>
+                                                            Good Moral Certificate
+                                                        </li>
+                                                                                                    </ul>
+                                            </div>
+                                        </div>
+                                                                                                </div>
+                                                            <div class="mt-4 sm:mt-5 flex gap-3 sm:gap-4 bg-tpc-primary/5 border border-tpc-primary/20 rounded-xl px-4 sm:px-5 py-3 sm:py-4">
+                                    <span class="shrink-0 text-tpc-primary mt-0.5">
+                                        <svg class="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20A10 10 0 0012 2z"/>
+                                        </svg>
+                                    </span>
+                                    <div>
+                                        <p class="text-[10px] sm:text-xs font-bold text-tpc-primary uppercase tracking-wide mb-1">Note</p>
+                                        <p class="text-xs sm:text-sm text-gray-600">Requirements may vary depending on the program. Please confirm with the admissions office for the latest official list.</p>
+                                    </div>
+                                </div>
+                                                    </div>
+                    
+                    
+                                                                    <div id="process" class="scroll-mt-20 sm:scroll-mt-24">
+                            <span id="enrollment-process" class="block -mt-24 pt-24 invisible absolute"></span>
+                            <div class="flex items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
+                                <span class="block h-5 w-1.5 bg-tpc-primary rounded-sm shrink-0"></span>
+                                <h2 class="text-[10px] sm:text-xs font-bold tracking-widest text-tpc-primary uppercase">Enrollment Process</h2>
+                                <div class="flex-1 h-px bg-gray-200"></div>
+                            </div>
+                            <div class="bg-white rounded-2xl border border-gray-100 shadow-md overflow-hidden">
+                                <div class="divide-y divide-gray-100">
+                                                                            <div class="flex gap-3 sm:gap-5 p-4 sm:p-5 hover:bg-gray-50 transition">
+                                            <span class="shrink-0 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-tpc-primary text-white text-xs sm:text-sm font-bold shadow-sm">1</span>
+                                            <div class="pt-1 min-w-0">
+                                                <p class="font-bold text-xs sm:text-sm text-gray-800">Prepare your requirements</p>
+                                                                                                    <p class="mt-1 text-xs sm:text-sm text-gray-500 leading-relaxed">Complete the documents listed above before visiting the office.</p>
+                                                                                            </div>
+                                        </div>
+                                                                            <div class="flex gap-3 sm:gap-5 p-4 sm:p-5 hover:bg-gray-50 transition">
+                                            <span class="shrink-0 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-tpc-primary text-white text-xs sm:text-sm font-bold shadow-sm">2</span>
+                                            <div class="pt-1 min-w-0">
+                                                <p class="font-bold text-xs sm:text-sm text-gray-800">Submit documents to Admissions</p>
+                                                                                                    <p class="mt-1 text-xs sm:text-sm text-gray-500 leading-relaxed">Proceed to the admissions office and present your documents for screening.</p>
+                                                                                            </div>
+                                        </div>
+                                                                            <div class="flex gap-3 sm:gap-5 p-4 sm:p-5 hover:bg-gray-50 transition">
+                                            <span class="shrink-0 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-tpc-primary text-white text-xs sm:text-sm font-bold shadow-sm">3</span>
+                                            <div class="pt-1 min-w-0">
+                                                <p class="font-bold text-xs sm:text-sm text-gray-800">Choose your program</p>
+                                                                                                    <p class="mt-1 text-xs sm:text-sm text-gray-500 leading-relaxed">Select the program that best fits your goals and career path.</p>
+                                                                                            </div>
+                                        </div>
+                                                                            <div class="flex gap-3 sm:gap-5 p-4 sm:p-5 hover:bg-gray-50 transition">
+                                            <span class="shrink-0 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-tpc-primary text-white text-xs sm:text-sm font-bold shadow-sm">4</span>
+                                            <div class="pt-1 min-w-0">
+                                                <p class="font-bold text-xs sm:text-sm text-gray-800">Assessment and payment</p>
+                                                                                                    <p class="mt-1 text-xs sm:text-sm text-gray-500 leading-relaxed">Follow the cashier and assessment instructions as directed.</p>
+                                                                                            </div>
+                                        </div>
+                                                                            <div class="flex gap-3 sm:gap-5 p-4 sm:p-5 hover:bg-gray-50 transition">
+                                            <span class="shrink-0 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-tpc-primary text-white text-xs sm:text-sm font-bold shadow-sm">5</span>
+                                            <div class="pt-1 min-w-0">
+                                                <p class="font-bold text-xs sm:text-sm text-gray-800">Confirm enrollment</p>
+                                                                                                    <p class="mt-1 text-xs sm:text-sm text-gray-500 leading-relaxed">Receive your confirmation slip and final enrollment instructions.</p>
+                                                                                            </div>
+                                        </div>
+                                                                    </div>
+                            </div>
+                                                    </div>
+                    
+                    
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow-md overflow-hidden">
+                        <div class="p-4 sm:p-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                            <div>
+                                <p class="font-bold text-sm sm:text-base text-gray-800">Explore programs before enrolling</p>
+                                <p class="mt-1 text-xs sm:text-sm text-gray-500">View all academic programs offered by Talibon Polytechnic College.</p>
+                            </div>
+                            <div class="flex gap-2 sm:gap-3 shrink-0">
+                                <a href="https://www.tpc.edu.ph/academics" class="flex-1 sm:flex-none inline-flex items-center justify-center rounded-full border-2 border-tpc-primary bg-tpc-primary px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-white hover:bg-tpc-secondary hover:border-tpc-secondary transition">View Programs</a>
+                                <a href="https://www.tpc.edu.ph/news" class="flex-1 sm:flex-none inline-flex items-center justify-center rounded-full border-2 border-tpc-primary px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-tpc-primary hover:bg-tpc-primary hover:text-white transition">Updates →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                <aside class="space-y-4 sm:space-y-6 lg:sticky lg:top-24 lg:self-start">
+
+                    
+                                                                    <div id="office-hours" class="bg-white rounded-2xl border border-gray-100 shadow-md overflow-hidden">
+                            <div class="px-4 sm:px-5 py-3 sm:py-4 border-b border-gray-100">
+                                <p class="text-[10px] sm:text-xs font-bold text-tpc-primary uppercase tracking-widest">Office Hours</p>
+                            </div>
+                            <div class="px-4 sm:px-5 divide-y divide-gray-100">
+                                                                    <div class="flex items-center justify-between py-2.5 sm:py-3 text-xs sm:text-sm">
+                                        <span class="text-gray-500">Monday – Friday</span>
+                                        <span class="font-bold text-gray-800">8:00 AM – 5:00 PM</span>
+                                    </div>
+                                                                    <div class="flex items-center justify-between py-2.5 sm:py-3 text-xs sm:text-sm">
+                                        <span class="text-gray-500">Saturday</span>
+                                        <span class="font-bold text-gray-800">8:00 AM – 12:00 PM</span>
+                                    </div>
+                                                                    <div class="flex items-center justify-between py-2.5 sm:py-3 text-xs sm:text-sm">
+                                        <span class="text-gray-500">Sunday</span>
+                                        <span class="font-bold text-gray-800">Closed</span>
+                                    </div>
+                                                            </div>
+                                                            <div class="border-t border-gray-100 bg-tpc-primary/5 px-4 sm:px-5 py-3 sm:py-4 rounded-b-2xl">
+                                    <p class="text-[10px] sm:text-xs font-bold text-tpc-primary uppercase tracking-wide mb-1">Tip</p>
+                                    <p class="text-xs sm:text-sm text-gray-600">If you&#039;re unsure about requirements, message the office first.</p>
+                                </div>
+                                                    </div>
+                    
+                    
+                    <div class="bg-white rounded-2xl border border-gray-100 shadow-md overflow-hidden">
+                        <div class="px-4 sm:px-5 py-3 sm:py-4 border-b border-gray-100">
+                            <p class="text-[10px] sm:text-xs font-bold text-tpc-primary uppercase tracking-widest">Contact Admissions</p>
+                        </div>
+                        <div class="p-4 sm:p-5">
+                            <p class="text-xs sm:text-sm text-gray-500 leading-relaxed">Reach out for enrollment concerns, schedule, and guidance.</p>
+                            <a href="https://www.tpc.edu.ph/contact" class="mt-3 sm:mt-4 flex items-center justify-center rounded-full border-2 border-tpc-primary bg-tpc-primary px-5 py-2.5 text-xs sm:text-sm font-bold text-white hover:bg-tpc-secondary hover:border-tpc-secondary transition">Go to Contact Page</a>
+                        </div>
+                    </div>
+
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    
+    <script>
+    (function () {
+
+        /* ── Styles ──────────────────────────────────────── */
+        var styleEl = document.createElement('style');
+        styleEl.id = 'dl-fab-styles';
+        styleEl.textContent = [
+            '#dl-fab{position:fixed;bottom:1.75rem;left:1.75rem;z-index:9999;display:flex;align-items:center;gap:.5rem;padding:.65rem 1.1rem;background:#166534;color:#fff;border-radius:9999px;font-size:.78rem;font-weight:700;letter-spacing:.04em;box-shadow:0 4px 20px rgba(22,101,52,.35),0 1px 4px rgba(0,0,0,.15);border:none;cursor:pointer;text-transform:uppercase;transition:transform .15s,box-shadow .15s,background .15s;}',
+            '#dl-fab:hover{background:#14532d;box-shadow:0 6px 28px rgba(22,101,52,.45);transform:translateY(-1px);}',
+            '#dl-fab svg{flex-shrink:0;}',
+            '.dl-fab-label{white-space:nowrap;}',
+            '@media(max-width:639px){#dl-fab{padding:.75rem;border-radius:50%;bottom:1.25rem;left:1.25rem;}.dl-fab-label{display:none;}}',
+            '#dl-modal-overlay{position:fixed;inset:0;z-index:9998;background:rgba(0,0,0,.45);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .2s;}',
+            '#dl-modal-overlay.open{opacity:1;pointer-events:all;}',
+            '#dl-modal{background:#fff;border-radius:1.25rem;width:min(26rem,calc(100vw - 2rem));box-shadow:0 24px 64px rgba(0,0,0,.18);overflow:hidden;transform:translateY(12px) scale(.97);transition:transform .22s cubic-bezier(.16,1,.3,1);}',
+            '#dl-modal-overlay.open #dl-modal{transform:translateY(0) scale(1);}',
+            '.dl-modal-header{background:linear-gradient(135deg,#166534 0%,#15803d 100%);padding:1.25rem 1.5rem 1rem;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;}',
+            '.dl-modal-header h3{color:#fff;font-size:.95rem;font-weight:800;letter-spacing:-.01em;line-height:1.2;margin:0;}',
+            '.dl-modal-header p{color:rgba(255,255,255,.7);font-size:.72rem;margin:.25rem 0 0;}',
+            '.dl-modal-close{background:rgba(255,255,255,.18);border:none;color:#fff;cursor:pointer;width:1.75rem;height:1.75rem;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .15s;}',
+            '.dl-modal-close:hover{background:rgba(255,255,255,.32);}',
+            '.dl-modal-body{padding:1.25rem 1.5rem;}',
+            '.dl-toggle-list{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.1rem;}',
+            '.dl-toggle{display:flex;align-items:center;gap:.75rem;padding:.65rem .9rem;background:#f8fafb;border:1.5px solid #e5e7eb;border-radius:.75rem;cursor:pointer;transition:border-color .14s,background .14s;user-select:none;}',
+            '.dl-toggle:hover{background:#f0fdf4;border-color:#86efac;}',
+            '.dl-toggle.selected{background:#f0fdf4;border-color:#16a34a;}',
+            '.dl-toggle input[type=checkbox]{display:none;}',
+            '.dl-check-box{width:1.15rem;height:1.15rem;border-radius:.3rem;border:2px solid #d1d5db;background:#fff;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:background .14s,border-color .14s;}',
+            '.dl-toggle.selected .dl-check-box{background:#16a34a;border-color:#16a34a;}',
+            '.dl-check-box svg{display:none;}',
+            '.dl-toggle.selected .dl-check-box svg{display:block;}',
+            '.dl-toggle-text{flex:1;}',
+            '.dl-toggle-text strong{display:block;font-size:.8rem;font-weight:700;color:#1f2937;}',
+            '.dl-toggle-text span{font-size:.7rem;color:#6b7280;}',
+            '.dl-actions{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;}',
+            '.dl-btn{display:flex;align-items:center;justify-content:center;gap:.45rem;padding:.65rem .5rem;border-radius:.75rem;font-size:.78rem;font-weight:700;letter-spacing:.02em;cursor:pointer;border:2px solid transparent;transition:transform .12s,box-shadow .12s,background .14s,border-color .14s;text-transform:uppercase;}',
+            '.dl-btn:active{transform:scale(.96);}',
+            '.dl-btn:disabled{opacity:.45;pointer-events:none;}',
+            '.dl-btn-print{background:#fff;border-color:#166534;color:#166534;}',
+            '.dl-btn-print:hover{background:#f0fdf4;}',
+            '.dl-btn-img{background:#166534;color:#fff;}',
+            '.dl-btn-img:hover{background:#14532d;box-shadow:0 3px 12px rgba(22,101,52,.35);}',
+            '.dl-note{margin-top:.9rem;padding:.55rem .75rem;background:#fffbeb;border:1px solid #fde68a;border-radius:.6rem;font-size:.68rem;color:#92400e;line-height:1.5;display:none;}',
+            '.dl-note.visible{display:block;}',
+            '#dl-spinner{position:fixed;inset:0;z-index:10000;background:rgba(255,255,255,.8);backdrop-filter:blur(4px);display:none;flex-direction:column;align-items:center;justify-content:center;gap:1rem;}',
+            '#dl-spinner.visible{display:flex;}',
+            '.dl-spinner-ring{width:3rem;height:3rem;border-radius:50%;border:3px solid #dcfce7;border-top-color:#166534;animation:dlspin .7s linear infinite;}',
+            '@keyframes dlspin{to{transform:rotate(360deg);}}',
+            '#dl-spinner p{font-size:.8rem;font-weight:600;color:#166534;letter-spacing:.03em;}',
+            '@media print{*{-webkit-print-color-adjust:exact !important;print-color-adjust:exact !important;}',
+            'body>*:not(#admission-print-root){display:none !important;}',
+            '#admission-print-root{display:block !important;position:static !important;width:100% !important;margin:0 !important;}',
+            '#dl-fab,#dl-modal-overlay,#dl-spinner{display:none !important;}',
+            '.print-page{font-family:"Segoe UI",system-ui,sans-serif;max-width:780px;margin:0 auto;padding:0;color:#111827;}',
+            '.print-header{background:#166534 !important;color:#fff !important;padding:28px 36px 22px;margin-bottom:28px;}',
+            '.print-logo-row{display:flex;align-items:center;gap:14px;margin-bottom:10px;}',
+            '.print-header h1{font-size:1.35rem;font-weight:800;margin:0;letter-spacing:-.02em;}',
+            '.print-header p{font-size:.78rem;color:rgba(255,255,255,.72);margin:4px 0 0;}',
+            '.print-date{font-size:.68rem;color:rgba(255,255,255,.55);margin-top:12px;}',
+            '.print-section{margin-bottom:26px;break-inside:avoid;}',
+            '.print-section-title{font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#166534;display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #dcfce7;}',
+            '.print-section-title::before{content:"";display:inline-block;width:4px;height:16px;background:#166534;border-radius:2px;}',
+            '.print-req-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}',
+            '.print-req-card{border:1.5px solid #d1fae5;border-radius:10px;overflow:hidden;}',
+            '.print-req-card-top{background:#166534 !important;color:#fff !important;font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;}',
+            '.print-req-card ul{list-style:none;padding:12px 14px;margin:0;}',
+            '.print-req-card li{display:flex;align-items:flex-start;gap:8px;font-size:.78rem;color:#374151;padding:4px 0;line-height:1.4;}',
+            '.print-req-card li::before{content:"";display:inline-block;flex-shrink:0;width:7px;height:7px;border-radius:50%;background:#16a34a !important;margin-top:5px;}',
+            '.print-note{background:#f0fdf4 !important;border:1.5px solid #bbf7d0 !important;border-radius:8px;padding:10px 14px;margin-top:12px;font-size:.74rem;color:#166534;line-height:1.5;}',
+            '.print-note strong{display:block;font-size:.62rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;}',
+            '.print-steps{display:flex;flex-direction:column;gap:0;border:1.5px solid #d1fae5;border-radius:10px;overflow:hidden;}',
+            '.print-step{display:flex;align-items:flex-start;gap:14px;padding:11px 16px;border-bottom:1px solid #f0fdf4;background:#fff !important;}',
+            '.print-step:last-child{border-bottom:none;}',
+            '.print-step-num{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:#166534 !important;color:#fff !important;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;}',
+            '.print-step-body{flex:1;padding-top:3px;}',
+            '.print-step-body strong{display:block;font-size:.8rem;font-weight:700;color:#111827;}',
+            '.print-step-body p{font-size:.74rem;color:#6b7280;margin:2px 0 0;line-height:1.4;}',
+            '.print-schedule{border:1.5px solid #d1fae5;border-radius:10px;overflow:hidden;}',
+            '.print-schedule-row{display:flex;justify-content:space-between;align-items:center;padding:9px 16px;border-bottom:1px solid #f0fdf4;font-size:.78rem;background:#fff !important;}',
+            '.print-schedule-row:last-child{border-bottom:none;}',
+            '.print-schedule-row span:first-child{color:#6b7280;}',
+            '.print-schedule-row span:last-child{font-weight:700;color:#111827;}',
+            '.print-footer{margin-top:32px;padding-top:14px;border-top:1px solid #e5e7eb;font-size:.65rem;color:#9ca3af;text-align:center;}}'
+        ].join('');
+        document.head.appendChild(styleEl);
+
+        /* ── FAB HTML ─────────────────────────────────────── */
+        var fabHTML =
+            '<button id="dl-fab" aria-label="Download or Print" onclick="openDlModal()">' +
+                '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">' +
+                    '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>' +
+                    '<polyline points="7 10 12 15 17 10"/>' +
+                    '<line x1="12" y1="15" x2="12" y2="3"/>' +
+                '</svg>' +
+                '<span class="dl-fab-label">Download / Print</span>' +
+            '</button>';
+
+        /* ── Modal HTML ───────────────────────────────────── */
+        var togglesHTML = '';
+                togglesHTML +=
+            '<label class="dl-toggle selected" data-section="requirements">' +
+                '<input type="checkbox" checked>' +
+                '<div class="dl-check-box">' +
+                    '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' +
+                '</div>' +
+                '<div class="dl-toggle-text"><strong>Admission Requirements</strong><span>Freshmen &amp; Transferee document checklists</span></div>' +
+            '</label>';
+                        togglesHTML +=
+            '<label class="dl-toggle selected" data-section="process">' +
+                '<input type="checkbox" checked>' +
+                '<div class="dl-check-box">' +
+                    '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' +
+                '</div>' +
+                '<div class="dl-toggle-text"><strong>Enrollment Process</strong><span>Step-by-step enrollment guide</span></div>' +
+            '</label>';
+                        togglesHTML +=
+            '<label class="dl-toggle selected" data-section="office_hours">' +
+                '<input type="checkbox" checked>' +
+                '<div class="dl-check-box">' +
+                    '<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>' +
+                '</div>' +
+                '<div class="dl-toggle-text"><strong>Office Hours</strong><span>Admissions office schedule</span></div>' +
+            '</label>';
+        
+        var modalHTML =
+            '<div id="dl-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="dl-modal-title" onclick="closeDlModalOutside(event)">' +
+                '<div id="dl-modal">' +
+                    '<div class="dl-modal-header">' +
+                        '<div><h3 id="dl-modal-title">Download &amp; Print</h3><p>Select the sections you want to include</p></div>' +
+                        '<button class="dl-modal-close" onclick="closeDlModal()" aria-label="Close">' +
+                            '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">' +
+                                '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>' +
+                            '</svg>' +
+                        '</button>' +
+                    '</div>' +
+                    '<div class="dl-modal-body">' +
+                        '<div class="dl-toggle-list">' + togglesHTML + '</div>' +
+                        '<div class="dl-actions">' +
+                            '<button class="dl-btn dl-btn-print" onclick="doPrint()">' +
+                                '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
+                                    '<polyline points="6 9 6 2 18 2 18 9"/>' +
+                                    '<path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>' +
+                                    '<rect x="6" y="14" width="12" height="8"/>' +
+                                '</svg>Print' +
+                            '</button>' +
+                            '<button class="dl-btn dl-btn-img" onclick="doSaveImage()">' +
+                                '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">' +
+                                    '<rect x="3" y="3" width="18" height="18" rx="2"/>' +
+                                    '<circle cx="8.5" cy="8.5" r="1.5"/>' +
+                                    '<polyline points="21 15 16 10 5 21"/>' +
+                                '</svg>Save as Image' +
+                            '</button>' +
+                        '</div>' +
+                        '<div class="dl-note" id="dl-note-none">Please select at least one section.</div>' +
+                    '</div>' +
+                '</div>' +
+            '</div>';
+
+        var spinnerHTML =
+            '<div id="dl-spinner">' +
+                '<div class="dl-spinner-ring"></div>' +
+                '<p>Generating image\u2026</p>' +
+            '</div>';
+
+        var printRootHTML = '<div id="admission-print-root" style="display:none;position:absolute;left:-9999px;top:0;width:800px;"></div>';
+
+        /* ── Inject all elements directly onto <body> ─────── */
+        document.body.insertAdjacentHTML('beforeend', fabHTML + modalHTML + spinnerHTML + printRootHTML);
+
+        /* ── Bind toggle events ───────────────────────────── */
+        document.querySelectorAll('.dl-toggle').forEach(function(lbl) {
+            lbl.addEventListener('click', function() {
+                var cb = lbl.querySelector('input[type=checkbox]');
+                cb.checked = !cb.checked;
+                lbl.classList.toggle('selected', cb.checked);
+                document.getElementById('dl-note-none').classList.remove('visible');
+            });
+        });
+
+        /* ── Cleanup: remove everything when PJAX navigates away ── */
+        function dlCleanup() {
+            ['dl-fab','dl-modal-overlay','dl-spinner','admission-print-root','dl-fab-styles'].forEach(function(id) {
+                var el = document.getElementById(id);
+                if (el) el.parentNode.removeChild(el);
+            });
+            /* Remove style from head */
+            var s = document.getElementById('dl-fab-styles');
+            if (s) s.parentNode.removeChild(s);
+            document.removeEventListener('keydown', escHandler);
+        }
+
+        /* Listen for the moment #tpc-content gets swapped by PJAX.
+           We detect this by watching for our FAB's parent (body) to
+           no longer contain our anchor element. */
+        var anchorEl = document.getElementById('requirements') || document.getElementById('process');
+        if (anchorEl && typeof MutationObserver !== 'undefined') {
+            var observer = new MutationObserver(function() {
+                if (!document.getElementById('dl-fab')) { observer.disconnect(); return; }
+                /* If the admission content anchor is gone, we've navigated away */
+                if (!document.getElementById('requirements') && !document.getElementById('process')) {
+                    dlCleanup();
+                    observer.disconnect();
+                }
+            });
+            observer.observe(document.getElementById('tpc-content') || document.body, { childList: true, subtree: false });
+        }
+
+        /* ── Escape key handler ───────────────────────────── */
+        function escHandler(e) { if (e.key === 'Escape') closeDlModal(); }
+        document.addEventListener('keydown', escHandler);
+
+    })();
+
+    /* ── Data ──────────────────────────────────────────── */
+    var TPC_ADMISSION = {
+        schoolName: "Talibon Polytechnic College",
+        date: "August 24, 2026",
+        logoUrl: "https://www.tpc.edu.ph/images/TPC-Logo.png",
+        sections: {
+                        freshmen: {
+                label: "For Freshmen",
+                items: ["Grade 12 Report Card\/Form 137 with at least 2nd quarter grade (Original)","PSA Birth Certificate (Original)","1 Long Brown Envelope","1 Long White Folder","2pcs 2x2 Picture (with name \u0026 course indicated at the back)","Entrance Exam Result","Good Moral Certificate"]            },
+                                    transferee: {
+                label: "For Transferees",
+                items: ["Transfer of Credentials (Hon. Dismissal \u0026 TOR) (Original)","PSA Birth Certificate (Original)","1 Long Brown Envelope","1 Long White Folder","2pcs 2x2 Picture (with name \u0026 course indicated at the back)","Entrance Exam Result","Good Moral Certificate"]            },
+                                    requirements_note: {
+                label: "Note",
+                note:  "Requirements may vary depending on the program. Please confirm with the admissions office for the latest official list."            },
+                                    process: {
+                label: "Enrollment Process",
+                note:  "",
+                items: [{"title":"Prepare your requirements","body":"Complete the documents listed above before visiting the office."},{"title":"Submit documents to Admissions","body":"Proceed to the admissions office and present your documents for screening."},{"title":"Choose your program","body":"Select the program that best fits your goals and career path."},{"title":"Assessment and payment","body":"Follow the cashier and assessment instructions as directed."},{"title":"Confirm enrollment","body":"Receive your confirmation slip and final enrollment instructions."}]            },
+                                    office_hours: {
+                label: "Office Hours",
+                note:  "If you\u0027re unsure about requirements, message the office first.",
+                items: [{"title":"Monday \u2013 Friday","body":"8:00 AM \u2013 5:00 PM"},{"title":"Saturday","body":"8:00 AM \u2013 12:00 PM"},{"title":"Sunday","body":"Closed"}]            },
+                    }
+    };
+
+    /* ── Modal open/close ──────────────────────────────── */
+    function openDlModal() {
+        document.getElementById('dl-modal-overlay').classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeDlModal() {
+        document.getElementById('dl-modal-overlay').classList.remove('open');
+        document.body.style.overflow = '';
+        document.getElementById('dl-note-none').classList.remove('visible');
+    }
+    function closeDlModalOutside(e) {
+        if (e.target === document.getElementById('dl-modal-overlay')) closeDlModal();
+    }
+
+    /* ── Helpers ───────────────────────────────────────── */
+    function getSelected() {
+        var sel = {};
+        document.querySelectorAll('.dl-toggle').forEach(function(lbl) {
+            if (lbl.querySelector('input').checked) sel[lbl.dataset.section] = true;
+        });
+        return sel;
+    }
+
+    function esc(str) {
+        return String(str||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    /* ── Build print HTML ──────────────────────────────── */
+    function buildPrintHTML(selected) {
+        var d = TPC_ADMISSION, html = '';
+        html += '<div class="print-page">';
+        html += '<div class="print-header">';
+        html += '<div class="print-logo-row">';
+        html += '<img src="'+d.logoUrl+'" alt="TPC Logo" style="width:44px;height:44px;object-fit:contain;flex-shrink:0;" />';
+        html += '<div><h1>'+esc(d.schoolName)+'</h1><p>Enrollment &amp; Admission Information</p></div>';
+        html += '</div>';
+        var chips = [];
+        if (selected.requirements) chips.push('Admission Requirements');
+        if (selected.process)      chips.push('Enrollment Process');
+        if (selected.office_hours) chips.push('Office Hours');
+        if (chips.length) html += '<p class="print-date">Includes: '+chips.join(' &nbsp;·&nbsp; ')+' &nbsp;·&nbsp; Printed '+esc(d.date)+'</p>';
+        html += '</div>';
+
+        if (selected.requirements) {
+            html += '<div class="print-section"><div class="print-section-title">Admission Requirements</div>';
+            html += '<div class="print-req-grid">';
+            ['freshmen','transferee'].forEach(function(k) {
+                if (!d.sections[k]) return;
+                var s = d.sections[k];
+                html += '<div class="print-req-card"><div class="print-req-card-top">'+esc(s.label)+'</div><ul>';
+                s.items.forEach(function(item) { html += '<li>'+esc(item)+'</li>'; });
+                html += '</ul></div>';
+            });
+            html += '</div>';
+            if (d.sections.requirements_note) {
+                var rn = d.sections.requirements_note;
+                html += '<div class="print-note"><strong>'+esc(rn.label)+'</strong>'+esc(rn.note)+'</div>';
+            }
+            html += '</div>';
+        }
+
+        if (selected.process && d.sections.process) {
+            var p = d.sections.process;
+            html += '<div class="print-section"><div class="print-section-title">'+esc(p.label)+'</div>';
+            html += '<div class="print-steps">';
+            p.items.forEach(function(step,i) {
+                html += '<div class="print-step"><div class="print-step-num">'+(i+1)+'</div>';
+                html += '<div class="print-step-body"><strong>'+esc(step.title)+'</strong>';
+                if (step.body) html += '<p>'+esc(step.body)+'</p>';
+                html += '</div></div>';
+            });
+            html += '</div>';
+            if (p.note) html += '<div class="print-note">'+esc(p.note)+'</div>';
+            html += '</div>';
+        }
+
+        if (selected.office_hours && d.sections.office_hours) {
+            var oh = d.sections.office_hours;
+            html += '<div class="print-section"><div class="print-section-title">'+esc(oh.label)+'</div>';
+            html += '<div class="print-schedule">';
+            oh.items.forEach(function(row) {
+                html += '<div class="print-schedule-row"><span>'+esc(row.title)+'</span><span>'+esc(row.body)+'</span></div>';
+            });
+            html += '</div>';
+            if (oh.note) html += '<div class="print-note">'+esc(oh.note)+'</div>';
+            html += '</div>';
+        }
+
+        html += '<div class="print-footer">Talibon Polytechnic College &nbsp;·&nbsp; Official Admission Information &nbsp;·&nbsp; '+esc(d.date)+'</div>';
+        html += '</div>';
+        return html;
+    }
+
+    /* ── Print ─────────────────────────────────────────── */
+    function doPrint() {
+        var selected = getSelected();
+        if (!Object.keys(selected).length) { document.getElementById('dl-note-none').classList.add('visible'); return; }
+        var root = document.getElementById('admission-print-root');
+        root.innerHTML = buildPrintHTML(selected);
+        root.style.cssText = 'display:block;position:static;left:auto;top:auto;width:auto;';
+        closeDlModal();
+        setTimeout(function() {
+            window.print();
+            setTimeout(function() {
+                root.style.cssText = 'display:none;position:absolute;left:-9999px;top:0;width:800px;';
+            }, 500);
+        }, 80);
+    }
+
+    /* ── Save as image ─────────────────────────────────── */
+    function doSaveImage() {
+        var selected = getSelected();
+        if (!Object.keys(selected).length) { document.getElementById('dl-note-none').classList.add('visible'); return; }
+        closeDlModal();
+        document.getElementById('dl-spinner').classList.add('visible');
+
+        function runCapture() {
+            var root = document.getElementById('admission-print-root');
+            root.innerHTML = buildPrintHTML(selected);
+            root.style.cssText = 'display:block;position:absolute;left:-9999px;top:0;width:820px;background:#fff;padding:0;font-family:Segoe UI,system-ui,sans-serif;color:#111827;';
+            applyPrintStyles(root);
+            setTimeout(function() {
+                html2canvas(root, {
+                    scale:2, useCORS:true, allowTaint:false,
+                    backgroundColor:'#ffffff', logging:false,
+                    width:820, windowWidth:820,
+                    onclone:function(cloned){ applyPrintStyles(cloned.getElementById('admission-print-root')); }
+                }).then(function(canvas) {
+                    document.getElementById('dl-spinner').classList.remove('visible');
+                    root.style.cssText = 'display:none;position:absolute;left:-9999px;top:0;width:800px;';
+                    var chips = [];
+                    if (selected.requirements) chips.push('requirements');
+                    if (selected.process)      chips.push('process');
+                    if (selected.office_hours) chips.push('office-hours');
+                    var link = document.createElement('a');
+                    link.download = 'TPC-Admission-'+chips.join('-')+'.png';
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+                }).catch(function(err) {
+                    document.getElementById('dl-spinner').classList.remove('visible');
+                    root.style.cssText = 'display:none;position:absolute;left:-9999px;top:0;width:800px;';
+                    console.error(err);
+                    alert('Image generation failed. Please try Print instead.');
+                });
+            }, 150);
+        }
+
+        if (window.html2canvas) { runCapture(); }
+        else {
+            var s = document.createElement('script');
+            s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+            s.onload = runCapture;
+            s.onerror = function() {
+                document.getElementById('dl-spinner').classList.remove('visible');
+                alert('Could not load image library. Please check your connection.');
+            };
+            document.head.appendChild(s);
+        }
+    }
+
+    /* ── Apply inline styles for html2canvas ──────────── */
+    function applyPrintStyles(root) {
+        if (!root) return;
+        var styleMap = {
+            '.print-page':            'font-family:Segoe UI,system-ui,sans-serif;max-width:780px;margin:0 auto;padding:36px 36px 28px;color:#111827;background:#fff;',
+            '.print-header':          'background:#166534;color:#fff;padding:28px 36px 22px;border-radius:12px;margin-bottom:28px;',
+            '.print-logo-row':        'display:flex;align-items:center;gap:14px;margin-bottom:10px;',
+            '.print-header h1':       'font-size:1.35rem;font-weight:800;margin:0;letter-spacing:-.02em;color:#fff;',
+            '.print-header p':        'font-size:.78rem;color:rgba(255,255,255,.72);margin:4px 0 0;',
+            '.print-date':            'font-size:.68rem;color:rgba(255,255,255,.55);margin-top:12px;',
+            '.print-section':         'margin-bottom:26px;',
+            '.print-section-title':   'font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#166534;display:flex;align-items:center;gap:8px;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #dcfce7;',
+            '.print-req-grid':        'display:grid;grid-template-columns:1fr 1fr;gap:14px;',
+            '.print-req-card':        'border:1.5px solid #d1fae5;border-radius:10px;overflow:hidden;',
+            '.print-req-card-top':    'background:#166534;color:#fff;font-size:.65rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:7px 14px;',
+            '.print-req-card ul':     'list-style:none;padding:12px 14px;margin:0;',
+            '.print-req-card li':     'display:flex;align-items:flex-start;gap:8px;font-size:.78rem;color:#374151;padding:4px 0;line-height:1.4;',
+            '.print-note':            'background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:8px;padding:10px 14px;margin-top:12px;font-size:.74rem;color:#166534;line-height:1.5;',
+            '.print-note strong':     'display:block;font-size:.62rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:3px;',
+            '.print-steps':           'display:flex;flex-direction:column;gap:0;border:1.5px solid #d1fae5;border-radius:10px;overflow:hidden;',
+            '.print-step':            'display:flex;align-items:flex-start;gap:14px;padding:11px 16px;border-bottom:1px solid #f0fdf4;background:#fff;',
+            '.print-step-num':        'flex-shrink:0;width:28px;height:28px;border-radius:50%;background:#166534;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;',
+            '.print-step-body':       'flex:1;padding-top:3px;',
+            '.print-step-body strong':'display:block;font-size:.8rem;font-weight:700;color:#111827;',
+            '.print-step-body p':     'font-size:.74rem;color:#6b7280;margin:2px 0 0;line-height:1.4;',
+            '.print-schedule':        'border:1.5px solid #d1fae5;border-radius:10px;overflow:hidden;',
+            '.print-schedule-row':    'display:flex;justify-content:space-between;align-items:center;padding:9px 16px;border-bottom:1px solid #f0fdf4;font-size:.78rem;background:#fff;',
+            '.print-footer':          'margin-top:32px;padding-top:14px;border-top:1px solid #e5e7eb;font-size:.65rem;color:#9ca3af;text-align:center;',
+        };
+        Object.keys(styleMap).forEach(function(sel) {
+            try { root.querySelectorAll(sel).forEach(function(el){ el.style.cssText += ';'+styleMap[sel]; }); } catch(e){}
+        });
+        root.querySelectorAll('.print-logo-row img').forEach(function(img) {
+            img.style.cssText += ';width:44px;height:44px;object-fit:contain;flex-shrink:0;display:block;';
+            img.setAttribute('crossorigin','anonymous');
+        });
+        root.querySelectorAll('.print-section-title').forEach(function(el) {
+            if (!el.querySelector('.print-before-bar')) {
+                var bar = document.createElement('span');
+                bar.className = 'print-before-bar';
+                bar.style.cssText = 'display:inline-block;width:4px;height:16px;background:#166534;border-radius:2px;flex-shrink:0;';
+                el.insertBefore(bar, el.firstChild);
+            }
+        });
+        root.querySelectorAll('.print-req-card li').forEach(function(li) {
+            if (!li.querySelector('.print-bullet')) {
+                var dot = document.createElement('span');
+                dot.className = 'print-bullet';
+                dot.style.cssText = 'display:inline-block;flex-shrink:0;width:7px;height:7px;border-radius:50%;background:#16a34a;margin-top:5px;';
+                li.insertBefore(dot, li.firstChild);
+            }
+        });
+    }
+
+    /* ── Scroll buttons ────────────────────────────────── */
+    function addDesktopHover(btn, on, off) {
+        if (!btn) return;
+        btn.addEventListener('mouseenter', function(){ Object.assign(btn.style, on); });
+        btn.addEventListener('mouseleave', function(){ Object.assign(btn.style, off); });
+    }
+    addDesktopHover(document.getElementById('btn-requirements'),
+        { backgroundColor:'var(--color-tpc-secondary,#166534)', borderColor:'var(--color-tpc-secondary,#166534)', color:'#fff' },
+        { backgroundColor:'#fff', borderColor:'#fff', color:'' }
+    );
+    addDesktopHover(document.getElementById('btn-process'),
+        { backgroundColor:'#fff', borderColor:'#fff', color:'var(--color-tpc-primary,#15803d)' },
+        { backgroundColor:'', borderColor:'', color:'#fff' }
+    );
+    document.querySelectorAll('[data-scroll-btn]').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = document.querySelector(btn.getAttribute('href'));
+            btn.style.transform = 'scale(0.93)'; btn.style.opacity = '0.65';
+            setTimeout(function() {
+                btn.style.transform = ''; btn.style.opacity = '';
+                btn.style.backgroundColor = ''; btn.style.borderColor = ''; btn.style.color = '';
+                if (target) target.scrollIntoView({ behavior:'smooth', block:'start' });
+            }, 200);
+        });
+    });
+    </script>
+
+        </main>
+
+        <footer id="tpc-footer">
+
+    
+    <div class="bg-tpc-secondary text-white">
+        <div class="max-w-7xl mx-auto px-5 py-10 sm:py-12">
+            <div class="flex flex-col items-center gap-10 sm:flex-row sm:items-start sm:justify-between sm:gap-10">
+
+                
+                <div class="flex items-start gap-3">
+                    <img src="https://www.tpc.edu.ph/images/TPC-Logo.png" alt="TPC Logo"
+                        class="h-20 w-20 rounded shrink-0">
+                    <div>
+                        <p class="!text-left text-lg font-bold text-white leading-tight">Talibon Polytechnic College</p>
+                        <p class="!text-left mt-1.5 text-sm text-white/70 leading-relaxed max-w-sm">
+                            Committed to providing accessible, high-quality education through academic
+                            excellence, innovation, and service to the community.
+                        </p>
+                    </div>
+                </div>
+
+                
+                <div class="w-16 h-px bg-white/20 sm:hidden"></div>
+
+                
+                <div class="flex flex-col items-center sm:items-start">
+                    <p class="text-xs font-bold text-tpc-accent uppercase tracking-widest mb-4">Contact</p>
+                    <ul class="grid grid-cols-1 gap-y-4 sm:grid-cols-[max-content_max-content] sm:gap-x-10 text-sm text-white/75">
+
+                        <li class="flex items-center gap-3">
+                            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white">
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987H7.898V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                                </svg>
+                            </span>
+                            <a href="https://www.facebook.com/TalibonPolytechnicCollege" target="_blank" rel="noopener noreferrer"
+                               class="hover:text-white transition font-medium">
+                                Facebook Page
+                            </a>
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white">
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </span>
+                            <a href="/cdn-cgi/l/email-protection#f7838794809295849e8392c7c2b7909a969e9bd994989a" class="hover:text-white transition font-medium break-all"><span class="__cf_email__" data-cfemail="ee9a9e8d998b8c9d879a8bdedbae89838f8782c08d8183">[email&#160;protected]</span></a>
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white">
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                            </span>
+                            <span class="font-medium">(038) 411 5340</span>
+                        </li>
+
+                        <li class="flex items-start gap-3">
+                            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white">
+                                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </span>
+                            <span class="pt-1.5">San Isidro, Talibon, Bohol</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="bg-tpc-primary">
+        <div class="max-w-7xl mx-auto px-5 py-3 flex flex-col items-center gap-1.5 sm:flex-row sm:justify-between">
+            <p class="text-xs text-white/80 text-center sm:text-left">
+                © 2026 Talibon Polytechnic College. All rights reserved.
+            </p>
+            <div class="flex items-center gap-2">
+                <a href="https://www.facebook.com/share/18XASdjQ8z/" target="_blank" rel="noopener noreferrer">
+                    <img src="https://www.tpc.edu.ph/images/self-logo-icon.png" alt="SecrIT Solutions Logo"
+                         class="h-4 w-auto opacity-60 hover:opacity-100 transition">
+                </a>
+                <span class="text-white/30 text-xs">|</span>
+                <p class="text-xs text-white/60">SecrIT Solutions: AABJRSV</p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+    </div>
+
+    
+    <div x-data
+        x-show="$store.gallery.isOpen"
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4"
+        @click.self="$store.gallery.close()"
+        @keydown.escape.window="$store.gallery.close()"
+        @keydown.arrow-left.window="$store.gallery.prev()"
+        @keydown.arrow-right.window="$store.gallery.next()"
+        style="display:none">
+
+        <button @click="$store.gallery.close()" type="button"
+                class="absolute top-4 right-4 z-10 h-9 w-9 rounded-full bg-white/10 hover:bg-white/20
+                    text-white flex items-center justify-center transition">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+            </svg>
+        </button>
+
+        <div class="absolute top-4 left-1/2 -translate-x-1/2 z-10 bg-white/10 text-white text-xs font-bold px-3 py-1 rounded-full">
+            <span x-text="$store.gallery.current + 1"></span> / <span x-text="$store.gallery.images.length"></span>
+        </div>
+
+        <button @click="$store.gallery.prev()" type="button" x-show="$store.gallery.images.length > 1"
+                class="absolute left-3 sm:left-6 z-10 h-10 w-10 rounded-full bg-white/10 hover:bg-white/25
+                    text-white flex items-center justify-center transition">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+        </button>
+
+        <img :src="$store.gallery.currentUrl"
+            :alt="'Photo ' + ($store.gallery.current + 1)"
+            class="max-h-[85vh] max-w-full rounded-xl object-contain shadow-2xl select-none"
+            x-transition:enter="transition ease-out duration-150"
+            x-transition:enter-start="opacity-0 scale-95"
+            x-transition:enter-end="opacity-100 scale-100">
+
+        <button @click="$store.gallery.next()" type="button" x-show="$store.gallery.images.length > 1"
+                class="absolute right-3 sm:right-6 z-10 h-10 w-10 rounded-full bg-white/10 hover:bg-white/25
+                    text-white flex items-center justify-center transition">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+        </button>
+    </div>
+
+    
+    <div x-data="feedbackWidget()" class="fixed bottom-5 right-5 z-[9990]">
+
+        
+        <button @click="open = true" x-show="!open" type="button" x-ref="fabBtn"
+            :class="onDark
+                ? 'bg-white text-tpc-primary shadow-lg shadow-black/25 hover:bg-tpc-accent ring-1 ring-black/5'
+                : 'bg-tpc-primary text-white shadow-lg shadow-tpc-primary/30 hover:bg-tpc-secondary'"
+            class="group flex items-center gap-2 rounded-full pl-4 pr-5 py-3 transition-colors duration-300
+                focus:outline-none focus:ring-4 focus:ring-tpc-primary/20">
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-6l-4 4v-4z"/>
+            </svg>
+            <span class="text-sm font-bold hidden sm:inline">Feedback</span>
+        </button>
+
+        
+        <div x-show="open" x-transition.opacity style="display:none"
+            class="fixed inset-0 z-[9991] bg-black/50 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4"
+            @click.self="close()" @keydown.escape.window="close()">
+
+            <div x-show="open"
+                x-transition:enter="transition ease-out duration-250"
+                x-transition:enter-start="opacity-0 translate-y-8 sm:scale-95"
+                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave="transition ease-in duration-150"
+                x-transition:leave-start="opacity-100 translate-y-0"
+                x-transition:leave-end="opacity-0 translate-y-8"
+                @click.stop
+                class="w-full sm:max-w-md bg-white rounded-t-3xl sm:rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+
+                
+                <div class="px-5 sm:px-6 py-4 border-b border-gray-100 flex items-center justify-between shrink-0">
+                    <div>
+                        <p class="text-[10px] font-bold text-tpc-primary uppercase tracking-widest">TPC Feedback</p>
+                        <h3 class="text-lg font-bold text-gray-800 mt-0.5" x-text="submitted ? 'Thank you!' : 'Share your feedback'"></h3>
+                    </div>
+                    <button @click="close()" type="button" class="h-8 w-8 rounded-full flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-600 transition">
+                        <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+
+                
+                <div class="overflow-y-auto px-5 sm:px-6 py-5 flex-1">
+
+                    
+                    <template x-if="submitted">
+                        <div class="text-center py-6">
+                            <div class="mx-auto h-14 w-14 rounded-full bg-green-50 flex items-center justify-center mb-4">
+                                <svg class="h-7 w-7 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                                </svg>
+                            </div>
+                            <p class="text-sm text-gray-500">Your feedback helps us improve. We appreciate you taking the time.</p>
+                            <button @click="close()" type="button"
+                                class="mt-5 inline-flex items-center rounded-full border-2 border-tpc-primary bg-tpc-primary px-5 py-2 text-sm font-bold text-white hover:bg-tpc-secondary hover:border-tpc-secondary transition">
+                                Close
+                            </button>
+                        </div>
+                    </template>
+
+                    
+                    <template x-if="!submitted">
+                        <form @submit.prevent="submit()" class="space-y-5">
+
+                            <input type="text" id="fb-widget-website" name="website" x-model="website" class="hidden" tabindex="-1" autocomplete="off">
+
+                            
+                            <div>
+                                <p class="block text-[10px] font-bold text-gray-400 uppercase tracking-wide mb-2">
+                                    How would you rate your experience? <span class="text-red-400">*</span>
+                                </p>
+                                <div class="flex gap-1.5" @mouseleave="hoverRating = 0">
+                                    <template x-for="i in 5" :key="i">
+                                        <button type="button" @click="rating = i" @mouseenter="hoverRating = i"
+                                            class="transition-transform hover:scale-110 focus:outline-none">
+                                            <svg class="h-9 w-9" :class="(hoverRating || rating) >= i ? 'text-amber-400' : 'text-gray-200'"
+                                                fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.958a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.447a1 1 0 00-.363 1.118l1.287 3.957c.3.922-.755 1.688-1.539 1.118l-3.367-2.446a1 1 0 00-1.176 0l-3.367 2.446c-.784.57-1.838-.196-1.539-1.118l1.287-3.957a1 1 0 00-.363-1.118L2.063 9.385c-.783-.57-.38-1.81.588-1.81h4.163a1 1 0 00.95-.69l1.285-3.958z"/>
+                                            </svg>
+                                        </button>
+                                    </template>
+                                </div>
+                                <p class="mt-1.5 text-xs font-semibold" :class="rating ? 'text-tpc-primary' : 'text-gray-300'" x-text="ratingLabel()"></p>
+                            </div>
+
+                            
+                            <div>
+                                <label for="fb-widget-category" class="block text-[10px] font-bold text-gray-400 uppercase tracking-wide mb-2">Category</label>
+                                <select id="fb-widget-category" name="category" x-model="category"
+                                    class="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-sm text-gray-800 focus:border-tpc-primary focus:ring-0 focus:outline-none transition">
+                                    <option value="">General</option>
+                                                                            <option value="facilities">Facilities</option>
+                                                                            <option value="faculty">Faculty &amp; Instruction</option>
+                                                                            <option value="admission">Admission</option>
+                                                                            <option value="website">Website / Online Services</option>
+                                                                            <option value="other">Other</option>
+                                                                    </select>
+                            </div>
+
+                            
+                            <div>
+                                <label for="fb-widget-message" class="block text-[10px] font-bold text-gray-400 uppercase tracking-wide mb-2">Comments</label>
+                                <textarea id="fb-widget-message" name="message" x-model="message" rows="3" placeholder="Tell us more (optional)..."
+                                    class="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-sm text-gray-800 focus:border-tpc-primary focus:ring-0 focus:outline-none transition resize-none placeholder-gray-300"></textarea>
+                            </div>
+
+                            
+                            <div>
+                                <button type="button" @click="showContact = !showContact"
+                                    class="flex items-center gap-1.5 text-xs font-bold text-tpc-primary hover:text-tpc-secondary transition">
+                                    <svg class="h-3.5 w-3.5 transition-transform" :class="showContact ? 'rotate-90' : ''" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                    Add contact info (optional)
+                                </button>
+                                <div x-show="showContact" x-transition class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <div>
+                                        <label for="fb-widget-name" class="sr-only">Your name</label>
+                                        <input id="fb-widget-name" type="text" name="name" x-model="name" placeholder="Your name" autocomplete="name"
+                                            class="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-sm text-gray-800 focus:border-tpc-primary focus:ring-0 focus:outline-none transition placeholder-gray-300">
+                                    </div>
+                                    <div>
+                                        <label for="fb-widget-email" class="sr-only">Your email</label>
+                                        <input id="fb-widget-email" type="email" name="email" x-model="email" placeholder="Your email" autocomplete="email"
+                                            class="w-full rounded-lg border border-gray-200 px-3 py-2.5 text-sm text-gray-800 focus:border-tpc-primary focus:ring-0 focus:outline-none transition placeholder-gray-300">
+                                    </div>
+                                </div>
+                                <p class="mt-1.5 text-[11px] text-gray-400">Leave these blank to stay anonymous. We'll only use them if you'd like a reply.</p>
+                            </div>
+
+                            <p x-show="error" x-text="error" class="text-xs text-red-500 font-semibold"></p>
+                        </form>
+                    </template>
+                </div>
+
+                
+                <template x-if="!submitted">
+                    <div class="px-5 sm:px-6 py-4 border-t border-gray-100 bg-gray-50 flex items-center justify-between shrink-0">
+                        <p class="text-[10px] text-gray-400">Anonymous by default</p>
+                        <button @click="submit()" :disabled="loading || !rating" type="button"
+                            class="inline-flex items-center gap-2 rounded-full border-2 border-tpc-primary bg-tpc-primary px-5 py-2.5 text-sm font-bold text-white hover:bg-tpc-secondary hover:border-tpc-secondary transition disabled:opacity-40 disabled:cursor-not-allowed">
+                            <svg x-show="loading" class="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+                            </svg>
+                            <span x-text="loading ? 'Sending...' : 'Submit Feedback'"></span>
+                        </button>
+                    </div>
+                </template>
+
+            </div>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        function feedbackWidget() {
+            return {
+                open: false, submitted: false, loading: false, error: '',
+                rating: 0, hoverRating: 0, category: '', message: '',
+                name: '', email: '', website: '', showContact: false,
+                onDark: false,
+                _rafPending: false,
+
+                init() {
+                    this._checkBg = this.checkBg.bind(this);
+                    window.addEventListener('scroll', this._checkBg, { passive: true });
+                    window.addEventListener('resize', this._checkBg);
+                    this._checkBg();
+
+                    // Re-check when PJAX swaps page content (sections/colors change)
+                    const content = document.getElementById('tpc-content');
+                    if (content && typeof MutationObserver !== 'undefined') {
+                        new MutationObserver(() => setTimeout(this._checkBg, 80))
+                            .observe(content, { childList: true, subtree: false });
+                    }
+                },
+
+                checkBg() {
+                    if (this._rafPending) return;
+                    this._rafPending = true;
+                    requestAnimationFrame(() => {
+                        this._rafPending = false;
+                        this._doCheckBg();
+                    });
+                },
+
+                _doCheckBg() {
+                    const btn = this.$refs.fabBtn;
+                    if (!btn) return;
+
+                    const rect = btn.getBoundingClientRect();
+                    const points = [
+                        [rect.left + rect.width / 2, rect.top + rect.height / 2],
+                        [rect.left + rect.width / 2, rect.top - 4],
+                        [rect.left + rect.width / 2, rect.bottom + 4],
+                    ];
+
+                    let color = null;
+
+                    for (const [x, y] of points) {
+                        let stack = [];
+                        if (document.elementsFromPoint) {
+                            stack = document.elementsFromPoint(x, y);
+                        } else {
+                            const el = document.elementFromPoint(x, y);
+                            if (el) stack = [el];
+                        }
+
+                        let bgEl = stack.find(el => el !== btn && !btn.contains(el));
+
+                        while (bgEl && bgEl !== document.documentElement) {
+                            const bg = getComputedStyle(bgEl).backgroundColor;
+                            const rgb = this.normalizeColor(bg);
+                            if (rgb) { color = rgb; break; }
+                            bgEl = bgEl.parentElement;
+                        }
+
+                        if (color) break;
+                    }
+
+                    if (!color) { this.onDark = false; return; }
+
+                    const { r, g, b } = color;
+                    const luminance = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+                    this.onDark = luminance < 0.55;
+                },
+
+                normalizeColor(colorStr) {
+                    if (!colorStr || colorStr === 'transparent') return null;
+
+                    if (!this._ctx) {
+                        this._ctx = document.createElement('canvas').getContext('2d');
+                    }
+                    const ctx = this._ctx;
+
+                    // Reset, then assign — invalid/transparent values leave fillStyle unchanged
+                    ctx.fillStyle = '#000000';
+                    ctx.fillStyle = colorStr;
+                    const normalized = ctx.fillStyle; // always '#rrggbb' or 'rgba(r, g, b, a)'
+
+                    let r, g, b, a = 1;
+
+                    if (normalized[0] === '#') {
+                        r = parseInt(normalized.slice(1, 3), 16);
+                        g = parseInt(normalized.slice(3, 5), 16);
+                        b = parseInt(normalized.slice(5, 7), 16);
+                    } else {
+                        const nums = normalized.match(/[\d.]+/g);
+                        if (!nums || nums.length < 3) return null;
+                        [r, g, b] = nums.map(Number);
+                        if (nums.length >= 4) a = Number(nums[3]);
+                    }
+
+                    if (a < 0.4) return null; // treat near-transparent as "no background here"
+
+                    return { r, g, b };
+                },
+
+                ratingLabel() {
+                    const labels = { 0: 'Tap a star to rate', 1: 'Poor', 2: 'Fair', 3: 'Good', 4: 'Very Good', 5: 'Excellent' };
+                    return labels[this.hoverRating || this.rating];
+                },
+                close() {
+                    this.open = false;
+                    if (this.submitted) setTimeout(() => this.reset(), 300);
+                },
+                reset() {
+                    Object.assign(this, {
+                        submitted: false, rating: 0, hoverRating: 0, category: '',
+                        message: '', name: '', email: '', error: '', showContact: false,
+                    });
+                },
+                async submit() {
+                    this.error = '';
+                    if (!this.rating) { this.error = 'Please select a star rating.'; return; }
+                    this.loading = true;
+                    try {
+                        const res = await fetch('https://www.tpc.edu.ph/feedback', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json',
+                                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                            },
+                            body: JSON.stringify({
+                                rating: this.rating, category: this.category, message: this.message,
+                                name: this.name, email: this.email, website: this.website,
+                                page_url: window.location.href,
+                            }),
+                        });
+                        if (!res.ok) {
+                            const data = await res.json().catch(() => ({}));
+                            throw new Error(data.message || 'Something went wrong. Please try again.');
+                        }
+                        this.submitted = true;
+                    } catch (e) {
+                        this.error = e.message || 'Something went wrong. Please try again.';
+                    } finally {
+                        this.loading = false;
+                    }
+                },
+            };
+        }
+    </script>
+
+      
+
+    
+
+</body>
+</html>
