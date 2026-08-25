@@ -15,9 +15,11 @@ Model: `gemini-3.5-flash-lite` via the Gemini API. Each case retrieves context f
 
 **Model answer:**
 
-> Per the Year 3 - First Semester curriculum checklist, the prerequisites for IS301 Systems Analysis and Design are IS201 (Data Structures and Algorithms) and IS205 (Information Management 1).
+> Per the `05_year_3_first_semester.txt` curriculum checklist, the prerequisites for IS301 Systems Analysis and Design are:
+> - IS201 (Data Structures and Algorithms)
+> - IS205 (Information Management 1)
 > 
-> I don't have that information in my knowledge base regarding how many units IS301 is.
+> Regarding the number of units, I don't have that information in my knowledge base.
 
 
 ## 2. Hallucination trap (prerequisite_verifier prompt)

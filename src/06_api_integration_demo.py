@@ -16,6 +16,12 @@ https://aistudio.google.com/apikey
 Transcripts are saved to docs/_api_demo_transcripts.md and quoted directly
 in docs/Prompt_Engineering.md - these are real model outputs, not
 hand-written examples.
+
+After the 4 fixed cases run, drops into a live query loop so you can type
+your own questions and get real grounded answers on the spot (uses the
+combined `live_advisor` prompt, which merges the grounding/scope/ambiguity
+rules from the 4 individual prompts above into one - see prompts.py).
+Type 'quit', 'exit', or an empty line to stop.
 """
 
 import os
@@ -105,8 +111,8 @@ def run_case(client: genai.Client, case: dict) -> dict:
         answer_text = f"[EMPTY RESPONSE - finish_reason={finish_reason}]"
 
     return {
-        "label": case["label"],
-        "purpose": case["purpose"],
+        "label": case.get("label", "Live query"),
+        "purpose": case.get("purpose", ""),
         "prompt_key": case["prompt_key"],
         "question": case["question"],
         "retrieved_sources": [h["source"] for h in hits],
@@ -149,6 +155,29 @@ def main():
 
     TRANSCRIPT_PATH.write_text("\n".join(lines), encoding="utf-8")
     print(f"\n\nSaved full transcripts to {TRANSCRIPT_PATH}")
+
+    live_query_loop(client)
+
+
+def live_query_loop(client: genai.Client) -> None:
+    print(f"\n{'=' * 90}\nLIVE QUERY MODE - ask Pathfinder anything about TPC's BSIS program\n{'=' * 90}")
+    print("(type 'quit', 'exit', or an empty line to stop)\n")
+
+    while True:
+        try:
+            question = input("Your question: ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\nExiting live query mode.")
+            break
+
+        if not question or question.lower() in {"quit", "exit"}:
+            print("Exiting live query mode.")
+            break
+
+        case = {"question": question, "prompt_key": "live_advisor"}
+        result = run_case(client, case)
+        print(f"Retrieved: {result['retrieved_sources']}")
+        print(f"\nAnswer:\n{result['answer']}\n")
 
 
 if __name__ == "__main__":

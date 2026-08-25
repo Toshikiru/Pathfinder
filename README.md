@@ -100,6 +100,10 @@ committed — see `.env.example`). Free key from
 index persists to `data/chroma_db/` (gitignored, regenerable by re-running
 `04_setup_vector_db.py`).
 
+After the 4 fixed test cases, `06_api_integration_demo.py` drops into a
+**live query loop** — type your own questions about TPC's BSIS program and
+get real grounded answers on the spot (`quit`/`exit`/empty line to stop).
+
 ## Team
 
 Working in a team of 2–4 (see [docs/Project_Proposal.docx](docs/Project_Proposal.docx)

@@ -42,12 +42,13 @@ answers").
 **Example (real transcript):** *"What are the prerequisites for IS301
 Systems Analysis and Design, and how many units is it?"*
 
-> Per the Year 3 - First Semester curriculum checklist, the prerequisites
-> for IS301 Systems Analysis and Design are IS201 (Data Structures and
-> Algorithms) and IS205 (Information Management 1).
+> Per the `05_year_3_first_semester.txt` curriculum checklist, the
+> prerequisites for IS301 Systems Analysis and Design are:
+> - IS201 (Data Structures and Algorithms)
+> - IS205 (Information Management 1)
 >
-> I don't have that information in my knowledge base regarding how many
-> units IS301 is.
+> Regarding the number of units, I don't have that information in my
+> knowledge base.
 
 Note the second half: the retrieved chunk *did* contain "IS301 ... 3 ..." in
 a table row, but the model treated the unit count as not confidently
@@ -142,6 +143,23 @@ prompt caught the ambiguity instead.
 
 ---
 
+## 5. `live_advisor` — combined prompt for interactive use
+
+**Purpose:** the 4 prompts above are deliberately isolated so each safeguard
+could be demonstrated and evaluated on its own. But a live assistant can't
+know in advance which failure mode a typed-in question will hit — an
+interactive user might ask an off-topic question, then a hallucination-prone
+one, then an ambiguous one, back to back. `live_advisor` merges the
+grounding, scope, and ambiguity rules from the 4 prompts above into a single
+prompt, in priority order (scope check first, then grounding, then
+ambiguity), so one prompt can handle any question type reasonably.
+
+**Where it's used:** `06_api_integration_demo.py`'s live query loop, which
+runs after the 4 fixed test cases — type your own question and get a real
+grounded (or correctly-refused) answer on the spot. See `src/prompts.py`.
+
+---
+
 ## Summary
 
 | Prompt | Guards against | Verified via |
@@ -150,3 +168,4 @@ prompt caught the ambiguity instead.
 | `prerequisite_verifier` | Inventing plausible-but-false prerequisite chains | Real refusal on a fabricated course code |
 | `scope_guard` | Answering off-topic requests | Real refusal on an unrelated question |
 | `clarification` | Confidently answering an underspecified question | Real clarifying question instead of a guess |
+| `live_advisor` | All of the above, combined, for interactive use | Real live-query-loop session |
