@@ -35,7 +35,11 @@ spec = importlib.util.spec_from_file_location("setup_vector_db", ROOT / "src" / 
 setup_vector_db = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(setup_vector_db)
 
-MODEL_NAME = "gemini-3.6-flash"
+MODEL_NAME = "gemini-3.5-flash-lite"
+# NOTE: the flagship "gemini-3.6-flash" free tier caps at 20 requests/DAY,
+# which is unworkable for iterative dev/demo/grading re-runs. The "-lite"
+# line has a much higher free-tier daily quota with only a modest quality
+# tradeoff, and is what this project standardizes on for CP2+.
 TRANSCRIPT_PATH = ROOT / "docs" / "_api_demo_transcripts.md"
 
 TEST_CASES = [

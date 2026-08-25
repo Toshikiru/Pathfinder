@@ -68,7 +68,7 @@ docs/
 
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate   # or .venv\Scripts\activate on Windows
+.venv\Scripts\activate #on Windows
 pip install -r requirements.txt
 cp .env.example .env        # then paste your free Gemini key (aistudio.google.com/apikey)
 ```

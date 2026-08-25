@@ -2,10 +2,20 @@
 
 Four structured system/instruction prompts, defined in [`src/prompts.py`](../src/prompts.py)
 and exercised for real via [`src/06_api_integration_demo.py`](../src/06_api_integration_demo.py)
-against the Gemini API (`gemini-3.6-flash`), grounded in context retrieved from
+against the Gemini API (`gemini-3.5-flash-lite`), grounded in context retrieved from
 the Chroma index. **Every transcript quoted below is a real model output**,
 captured in [`docs/_api_demo_transcripts.md`](_api_demo_transcripts.md) — none
 of these are hand-written/simulated examples.
+
+> **Model note:** we initially ran this against the flagship `gemini-3.6-flash`,
+> but its free tier caps at only 20 requests/day, which we hit mid-testing
+> (see the real `429 RESOURCE_EXHAUSTED` error our error handling in
+> `06_api_integration_demo.py` caught and reported cleanly). We switched to
+> `gemini-3.5-flash-lite`, which has a much higher free-tier daily quota and
+> produced equivalent-quality grounded answers — see `06_api_integration_demo.py`'s
+> `MODEL_NAME` comment for the reasoning. This is itself a small but real
+> LLMOps lesson worth mentioning in the Final Report: free-tier quota limits
+> are a first-class constraint on model choice, not just capability/cost.
 
 ---
 
@@ -32,14 +42,12 @@ answers").
 **Example (real transcript):** *"What are the prerequisites for IS301
 Systems Analysis and Design, and how many units is it?"*
 
-> Per the Year 3 - First Semester curriculum checklist
-> (`curriculum/05_year_3_first_semester.txt`), the prerequisites for
-> **IS301 Systems Analysis and Design** are:
-> * **IS201** (Data Structures and Algorithms)
-> * **IS205** (Information Management 1)
+> Per the Year 3 - First Semester curriculum checklist, the prerequisites
+> for IS301 Systems Analysis and Design are IS201 (Data Structures and
+> Algorithms) and IS205 (Information Management 1).
 >
-> Regarding how many units the course is worth, I don't have that
-> information in my knowledge base.
+> I don't have that information in my knowledge base regarding how many
+> units IS301 is.
 
 Note the second half: the retrieved chunk *did* contain "IS301 ... 3 ..." in
 a table row, but the model treated the unit count as not confidently
@@ -102,10 +110,9 @@ reads as a confident, intentional boundary rather than the model being
 **Example (real transcript):** *"Can you write me a 4-line poem about cats,
 and also what's the capital of France?"*
 
-> That's outside what I can help with — I am scoped strictly to TPC BSIS
-> course planning, enrollment, and academic-standing questions. Is there
-> something about your BSIS curriculum or degree progress I can help with
-> instead?
+> That's outside what I can help with - I'm scoped to TPC BSIS course
+> planning and degree-progress questions. Is there something about your
+> BSIS curriculum or academic standing I can help with instead?
 
 Correctly declined both the creative-writing request and the general-trivia
 question in one pass, without answering either.
@@ -126,8 +133,7 @@ highest and presenting it as universal.
 semester?"* — no year, semester, or completed-courses information given.
 
 > Which year and semester are you currently in, or which courses have you
-> already completed? Once you share your current standing, I can give you
-> the exact list of subjects you should take next semester.
+> already completed?
 
 The retrieved context (via semantic search) happened to include Year 2 Sem 2
 and Year 4 Sem 2 curriculum chunks — a naive grounded-answer prompt would

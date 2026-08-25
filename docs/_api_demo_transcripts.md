@@ -1,6 +1,6 @@
 # API Integration Demo - Real Model Transcripts
 
-Model: `gemini-3.6-flash` via the Gemini API. Each case retrieves context from the Chroma index built in `04_setup_vector_db.py`, then applies one of the four system prompts from `prompts.py`.
+Model: `gemini-3.5-flash-lite` via the Gemini API. Each case retrieves context from the Chroma index built in `04_setup_vector_db.py`, then applies one of the four system prompts from `prompts.py`.
 
 
 ## 1. Grounded answer (grounded_advisor prompt)
@@ -15,11 +15,9 @@ Model: `gemini-3.6-flash` via the Gemini API. Each case retrieves context from t
 
 **Model answer:**
 
-> Per the Year 3 - First Semester curriculum checklist (`[curriculum/05_year_3_first_semester.txt]`), the prerequisites for **IS301 Systems Analysis and Design** are:
-> * **IS201** (Data Structures and Algorithms)
-> * **IS205** (Information Management 1)
+> Per the Year 3 - First Semester curriculum checklist, the prerequisites for IS301 Systems Analysis and Design are IS201 (Data Structures and Algorithms) and IS205 (Information Management 1).
 > 
-> Regarding how many units the course is worth, I don't have that information in my knowledge base.
+> I don't have that information in my knowledge base regarding how many units IS301 is.
 
 
 ## 2. Hallucination trap (prerequisite_verifier prompt)
@@ -53,7 +51,7 @@ Model: `gemini-3.6-flash` via the Gemini API. Each case retrieves context from t
 
 **Model answer:**
 
-> That's outside what I can help with—I am scoped strictly to TPC BSIS course planning, enrollment, and academic-standing questions. Is there something about your BSIS curriculum or degree progress I can help with instead?
+> That's outside what I can help with - I'm scoped to TPC BSIS course planning and degree-progress questions. Is there something about your BSIS curriculum or academic standing I can help with instead?
 
 
 ## 4. Ambiguous query (clarification prompt)
@@ -68,4 +66,4 @@ Model: `gemini-3.6-flash` via the Gemini API. Each case retrieves context from t
 
 **Model answer:**
 
-> Which year and semester are you currently in, or which courses have you already completed? Once you share your current standing, I can give you the exact list of subjects you should take next semester.
+> Which year and semester are you currently in, or which courses have you already completed?
