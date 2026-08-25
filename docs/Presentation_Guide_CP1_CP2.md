@@ -1,108 +1,110 @@
-# Pathfinder — CP1 & CP2 Presentation Script
+# Pathfinder — CP1 & CP2 Presentation Script (Simple Version)
 
-Read this like a script. **RUN** = type this command. **SAY** = say this
-(your own words are fine, this is just the beat to hit). ~12-15 minutes total.
+This is your script. **RUN** = type this in the terminal. **SAY** = say
+this out loud, in your own words. Simple as that.
 
-Before you go on: venv activated, `pip install -r requirements.txt` done,
-`.env` has your real Gemini key. Run everything once beforehand so nothing
-downloads live. Don't show `.env` on screen.
+Before you present: make sure your venv is on, packages are installed, and
+your `.env` file has your real API key in it. Don't show that file on
+screen — it's your secret key.
 
 ---
 
-## Open
+## Start with this
 
 **SAY:**
-> "Pathfinder is a RAG-based academic advisor for TPC's BSIS program. Students
-> can ask course-planning and degree-progress questions and get a cited,
-> grounded answer instead of digging through a checklist. Checkpoint 1 is the
-> data foundation. Checkpoint 2 is prompt design and the vector index."
+> "Pathfinder is a chatbot that answers school questions for BSIS students —
+> things like 'what subjects do I need to take next' or 'what's the
+> passing grade.' Instead of guessing, it looks up real documents first,
+> then answers based on what it finds. That's called RAG — Retrieval
+> Augmented Generation. Basically: look it up, then answer."
 
 ---
 
-## Checkpoint 1 — Foundation & Data Pipeline
+## Part 1: Checkpoint 1 — Getting the Data Ready
+
+**SAY:**
+> "Before a chatbot can answer questions, it needs data to read. Checkpoint
+> 1 is all about collecting that data and cleaning it up."
 
 **SHOW:** `docs/Project_Proposal.docx`
 
 **SAY:**
-> "Here's the proposal — problem statement, target users, dataset sources,
-> success criteria."
+> "This is our proposal. It says what problem we're solving, who it's for,
+> where our data comes from, and how we'll know if it worked."
 
 **SHOW:** `docs/Data_Sources.md`
 
 **SAY:**
-> "30 documents total. 16 are real — scraped from TPC's public website. The
-> other 14 don't exist on TPC's site at all. The actual curriculum checklist
-> and academic policies live in a 52-page student handbook that's
-> preview-locked online — we couldn't get the real text. Instead of quietly
-> making up course requirements, we built that half of the dataset from CHED
-> Memorandum Order 25, s. 2015 — the real national policy that governs BSIS
-> programs in the Philippines. Every simulated file is labeled
-> `[SIMULATED DATA]` right in the file."
+> "We have 30 documents. 16 are real — we copied them straight from TPC's
+> website. The other 14 don't actually exist on the website. The real
+> subject list and grading rules are in a school handbook we couldn't fully
+> access online. So instead of making stuff up and pretending it's real, we
+> built those 14 documents using the actual national rules for BSIS
+> programs in the Philippines — and we clearly labeled every one of them
+> `[SIMULATED DATA]`, so nobody gets confused about what's real."
+
+Now run the data pipeline, one step at a time:
 
 **RUN:**
 ```bash
 python3 src/00_generate_curriculum_data.py
 ```
-**SAY:** "Generates the CHED-based curriculum and policy docs."
+**SAY:** "This creates our simulated subject list and school policies."
 
 **RUN:**
 ```bash
 python3 src/01_extract_raw_text.py
 ```
 **SAY:**
-> "Pulls plain text out of the 16 scraped pages with BeautifulSoup. We
-> tried a regex tag-stripper first — it leaked raw JavaScript into the text.
-> Switching to a real HTML parser fixed it."
+> "This pulls the plain text out of the web pages we saved. Websites are
+> full of extra code and buttons — this step just grabs the actual words."
 
 **RUN:**
 ```bash
 python3 src/02_preprocess.py
 ```
-**SAY (while the before/after examples print):**
-> "This strips about 35 lines of repeated site-chrome per page — nav, footer,
-> a feedback widget — and fixes a broken email placeholder. Cut the corpus
-> by roughly 28% with zero loss of actual advising content."
+**SAY (while the before/after text shows up):**
+> "Real website text is messy — menus, footers, broken email addresses. This
+> step cleans all of that out so only the useful text is left. Look — before
+> and after, right there on screen."
 
 **RUN:**
 ```bash
 python3 src/03_generate_embeddings.py
 ```
 **SAY:**
-> "We embed with `all-MiniLM-L6-v2` — open-source, runs fully local, no API
-> cost. Watch the bottom of the output: similar questions land close
-> together in embedding space, which is the sanity check before wiring up a
-> real vector database."
+> "Now here's the important part. Computers don't understand words the way
+> we do — they understand numbers. So we turn every piece of text into a
+> list of numbers called an 'embedding.' Sentences that mean similar things
+> end up with similar numbers. That's how the computer will later find the
+> right answer — by matching numbers, not just matching words."
 
-**SHOW:** `docs/Reflection_Checkpoint1.md` — read the last paragraph out loud.
+**SHOW:** `docs/Reflection_Checkpoint1.md` — read the last part out loud.
 
 **SAY:**
-> "This is where we caught our first real retrieval problem: a broad
-> curriculum table was outranking a more specific course description for a
-> targeted query, because we were chunking whole documents. That's the
-> setup for Checkpoint 2."
-
-*(Quick rubric map if asked where something is graded: proposal + the "16
-real / 14 simulated" story = scope clarity. `02_preprocess.py` output =
-preprocessing. `03_generate_embeddings.py` = embeddings. README + commit
-history = repo hygiene.)*
+> "While testing this, we noticed something: sometimes the bot picked the
+> wrong piece of text because we were searching whole documents instead of
+> smaller pieces. Good thing to catch early — that's exactly what
+> Checkpoint 2 starts to fix."
 
 ---
 
-## Checkpoint 2 — Prompts & Vector Indexing
+## Part 2: Checkpoint 2 — Teaching the Bot to Answer Safely
 
 **SAY:**
-> "Checkpoint 2 proves two things: we can constrain the model's behavior with
-> structured prompts, and we can stand up a real, queryable vector index over
-> the whole corpus."
+> "Checkpoint 2 has two jobs: build a smart search system for our data, and
+> teach the bot rules so it doesn't make things up."
 
 **RUN:**
 ```bash
 python3 src/04_setup_vector_db.py
 ```
-**SAY (point at one result on screen):**
-> "This indexes all 30 documents — 109 chunks — into Chroma using cosine
-> similarity. Look at the probation query — it pulls the exact policy chunk
-> with the 15-unit cap. That's real retrieval, not keyword matching."
+**SAY:**
+> "This loads all our text into something called a vector database — think
+> of it like a super-organized filing cabinet. When you ask a question, it
+> instantly finds the pieces of text closest in meaning to your question.
+> Look — ask about academic probation, and it finds the exact rule about
+> the 15-unit limit. That's the filing cabinet working."
 
 **RUN:**
 ```bash
@@ -111,78 +113,79 @@ python3 src/05_distance_metric_comparison.py
 **SHOW:** `docs/Distance_Metric_Comparison.md`
 
 **SAY:**
-> "We compared cosine, Euclidean, and dot product by hand on our own data.
-> All three gave identical rankings — because our embedding model has a
-> built-in normalization layer, which makes cosine and dot product
-> mathematically the same, and Euclidean just a rescaled version of cosine.
-> That's a real finding, not a dodge — and we still land on cosine as the
-> right default, for reasons the doc lays out."
+> "There's more than one way to measure 'closeness' between two pieces of
+> text. We tried three different ways and compared them on our own data. All
+> three gave the exact same results, and we explain why in the report. We're
+> using the method called 'cosine similarity' going forward."
 
-**SHOW:** `docs/Prompt_Engineering.md` (briefly)
+**SHOW:** `docs/Prompt_Engineering.md`
 
 **SAY:**
-> "We built 4 structured system prompts, each aimed at one failure mode:
-> hallucinating a fact, inventing a fake prerequisite, answering something
-> off-topic, and confidently answering a question that's too vague to answer
-> safely. Every example in this doc is a real captured transcript — nothing
-> here was written by hand."
+> "Now, the important safety part. AI chatbots sometimes make up answers
+> that sound believable but are completely false — that's called
+> 'hallucinating.' To stop that, we wrote 4 clear rule sets for the bot:
+> one for answering normal questions honestly, one for double-checking
+> prerequisites, one for politely saying 'that's not something I can help
+> with' when asked off-topic stuff, and one for asking a follow-up question
+> instead of guessing when something's unclear. Every example in this
+> document is a real answer the bot actually gave — nothing here is made up
+> by us."
 
-**RUN — this is the centerpiece:**
+**RUN — the fun part, do this live:**
 ```bash
 python3 src/06_api_integration_demo.py
 ```
 
-**SAY while the 4 fixed cases scroll by:**
-> "Watch these four go by: a grounded answer with a citation... a refusal to
-> invent prerequisites for a course that doesn't exist... a decline on an
-> off-topic question... and a clarifying question instead of a guessed
-> answer."
+**SAY while it runs 4 test questions automatically:**
+> "Watch it answer 4 test questions: one it answers correctly with a
+> source, one where it correctly says 'that course doesn't exist' instead
+> of making something up, one where it politely refuses an off-topic
+> question, and one where it asks us a clarifying question instead of
+> guessing."
 
-Then it drops into **live query mode** — `Your question:` — type a few of
-these on the spot:
+Then it will say `Your question:` and wait for you to type. Try these,
+live, in front of everyone:
 
 - `What are the prerequisites for IS205 Information Management 1?`
-  — clean grounded answer with a citation
+  → it answers correctly and tells you where the answer came from
 - `How many units can I enroll in while on academic probation?`
-  — pulls the exact figure (15 units)
+  → it gives the exact number, 15
 - `What's the weather like today?`
-  — off-topic refusal, live and unscripted
+  → it politely says "that's not something I can help with"
 - `What subjects should I take next?`
-  — asks which year/semester instead of guessing
+  → it asks you what year and semester you're in first, instead of guessing
 - `What are the prerequisites for IS777 Blockchain for Farmers?`
-  — live hallucination trap, a course made up on the spot
+  → a course that doesn't exist — watch it say so instead of inventing an answer
 
-Type `quit` to exit when you're done.
+Type `quit` when you're done.
 
-**If the API errors out live (rate limit, network blip):**
+**If the internet hiccups or the API gives an error:**
 **SAY:**
-> "This is actually the error handling working as designed — instead of
-> crashing, it reports the failure cleanly."
+> "No worries — this is actually our error handling doing its job. Instead
+> of crashing, it tells us clearly what went wrong."
 
-Then retry once, or fall back to `docs/_api_demo_transcripts.md`.
+Then just try again, or show the saved answers in `docs/_api_demo_transcripts.md`.
 
 ---
 
-## Close
+## Wrap it up
 
 **SAY:**
-> "So — Checkpoint 1 gave us a real, honestly-sourced knowledge base.
-> Checkpoint 2 gives us grounded, refusal-aware answers over that data, backed
-> by a real vector index. Checkpoint 3 turns this into a full RAG application
-> with memory and an ingestion pipeline."
+> "So, quick recap: Checkpoint 1 got us clean, honest data. Checkpoint 2
+> taught the bot to search that data smartly and answer safely without
+> making things up. Next, Checkpoint 3 turns this into a full chat app that
+> remembers the conversation."
 
 ---
 
-## If something breaks
+## If something goes wrong
 
-- **Chroma index missing/stale** → re-run `python3 src/04_setup_vector_db.py`.
-- **`GEMINI_API_KEY not set`** → `.env` still has the placeholder on this
-  machine.
-- **429 / quota error** → we already standardize on `gemini-3.5-flash-lite`
-  because the flagship model's free tier is only 20 requests/day (we hit
-  that during dev — it's noted at the top of `Prompt_Engineering.md`). If it
-  still happens, that's today's quota on this key — use the saved
-  transcripts.
-- **A live answer looks thin** → own it: *"that's the chunking limitation
-  we flagged in the Checkpoint 1 reflection — it's on the list for
-  Checkpoint 3's ingestion pipeline."* Better than pretending it's not there.
+- **Search results look empty or old** → run `python3 src/04_setup_vector_db.py` again.
+- **Says the API key is missing** → check your `.env` file has your real key, not the placeholder.
+- **Says "quota exceeded" / too many requests** → we already switched to a
+  model with a bigger free daily limit for this reason. If it still
+  happens, just wait a bit or use the saved answers instead.
+- **An answer looks weak or incomplete** → be honest about it: "that's a
+  known limitation we already wrote down, and we're improving it in the
+  next checkpoint." That's a much better answer than pretending everything
+  is perfect.
