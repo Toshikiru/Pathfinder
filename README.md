@@ -48,6 +48,7 @@ docs/
   Distance_Metric_Comparison.md    Checkpoint 2 deliverable
   _api_demo_transcripts.md         raw transcripts referenced by Prompt_Engineering.md
   _distance_metric_results.json    raw results referenced by Distance_Metric_Comparison.md
+  Presentation_Guide_CP1_CP2.md    step-by-step run-of-show for demoing CP1+CP2 live
 ```
 
 ## Data sources (summary — full detail in [docs/Data_Sources.md](docs/Data_Sources.md))
