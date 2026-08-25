@@ -9,6 +9,61 @@ screen — it's your secret key.
 
 ---
 
+## One-time setup: put this project on GitHub
+
+Do this once, before you present. Your instructor wants to see your code
+in a real GitHub repo, with your commit history showing steady progress —
+not one big upload at the end.
+
+**1. Make a new repo on GitHub**
+- Go to [github.com](https://github.com) and log in (make an account if you
+  don't have one).
+- Click the **+** icon top-right → **New repository**.
+- Name it something like `pathfinder-academic-advisor`.
+- Leave it **empty** — don't check "Add a README" or "Add .gitignore." Your
+  project already has those, and checking those boxes causes a conflict.
+- Click **Create repository**.
+- On the next page, copy the URL that looks like
+  `https://github.com/your-username/pathfinder-academic-advisor.git`.
+
+**2. Connect your local project to it**
+
+Open your terminal in the project folder and run these one at a time:
+
+```bash
+git remote add origin https://github.com/your-username/pathfinder-academic-advisor.git
+```
+*(paste the URL you copied — this just tells your project "this is where
+GitHub lives")*
+
+```bash
+git push -u origin main
+```
+*(this uploads everything — all your commits, all your files)*
+
+It may ask you to log in — follow the prompts (GitHub will likely open a
+browser window to confirm it's you).
+
+**3. Check it worked**
+
+Refresh the GitHub page in your browser. You should see all your files —
+`src/`, `docs/`, `README.md`, everything — and your commit history under
+the "commits" link.
+
+**One important thing:** your `.env` file with your real API key should
+**not** show up on GitHub. It's already listed in `.gitignore` so Git skips
+it automatically — just double check it's not there after pushing.
+
+**From now on**, every time you finish new work, save it to GitHub with:
+
+```bash
+git add .
+git commit -m "describe what you changed here"
+git push
+```
+
+---
+
 ## Start with this
 
 **SAY:**
