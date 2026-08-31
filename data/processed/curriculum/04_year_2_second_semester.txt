@@ -1,18 +1,21 @@
-[SIMULATED DATA] This document is a realistic reconstruction for the Pathfinder capstone project. It is modeled on CHED Memorandum Order No. 25, s. 2015 (BSIS program standards) and adapted for Talibon Polytechnic College's BSIS program. It is NOT an official TPC document; TPC's actual registrar prospectus is not publicly available online. Course codes and exact wording are authored for this project.
+[REAL DATA] This is Talibon Polytechnic College's official BSIS curriculum checklist, effective A.Y. 2024-2025, based on CHED Memorandum Order No. 25, s. 2015 and CMO No. 20, s. 2013. Transcribed from a printed copy of the signed checklist (prepared by Flordelis A. Turtoga, MAMT, Program Head, BSIS; approved by the VP for Academic Affairs, VP for Administration, and College President). Every course code, title, unit/lecture/lab load, and prerequisite here is real, not invented - see docs/Data_Sources.md for full provenance.
 BSIS Curriculum Checklist - Year 2 - Second Semester
 Program: Bachelor of Science in Information Systems (BSIS)
-Code Course Title Units Prerequisite(s)
-IS205 Information Management 1 3 IS201
-IS206 Human-Computer Interaction 3 IS103
-IS207 Data Communications and Networking 1 3 IS202
-IS208 Quantitative Methods 3 GE101
-GE203 Science, Technology and Society 3 None
-GE204 Statistics and Probability 3 GE101
-PE202 Team Sports 2 None
-Total units this term: 20
+Code Course Title Units Lec Lab Prerequisite(s)
+CC 104 Information Management 3 2 3 CC 103
+IS 104 System Analysis & Design 3 3 0 IS 103
+IPT 101 Integrative Programming and Technologies 3 2 3 HCI 1
+BED 103 Business Process Management 3 3 0 BED 102
+BED 104 Evaluation of Business Performance 3 3 0 CO-BED 103
+ISEL #1 IS Professional Elective #1 3 3 0 2nd Year Standing
+GECC 108 Readings in the Philippine History 3 3 0 None
+PATHFIT 4 Team Sports 2 2 0 PATHFIT 3
+Total units this term: 23 (Lecture: 21, Lab: 6)
 Prerequisite notes:
-- IS205 Information Management 1: requires IS201 (Data Structures and Algorithms). Databases and data modeling; prerequisite for SAD and later systems courses.
-- IS206 Human-Computer Interaction: requires IS103 (Fundamentals of Information Systems).
-- IS207 Data Communications and Networking 1: requires IS202 (Platform Technologies).
-- IS208 Quantitative Methods: requires GE101 (Mathematics in the Modern World).
-- GE204 Statistics and Probability: requires GE101 (Mathematics in the Modern World).
+- CC 104 Information Management: requires CC 103 (Data Structures and Algorithms).
+- IS 104 System Analysis & Design: requires IS 103 (IT Infrastructures and Network).
+- IPT 101 Integrative Programming and Technologies: requires HCI 1 (Human Computer Interaction).
+- BED 103 Business Process Management: requires BED 102 (Financial Management).
+- BED 104 Evaluation of Business Performance: co-requisite with BED 103 (Business Process Management).
+- ISEL #1 IS Professional Elective #1: requires 2nd Year Standing.
+- PATHFIT 4 Team Sports: requires PATHFIT 3 (Individual and Dual Sports).

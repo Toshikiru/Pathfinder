@@ -52,7 +52,7 @@ TEST_CASES = [
     {
         "label": "1. Grounded answer (grounded_advisor prompt)",
         "prompt_key": "grounded_advisor",
-        "question": "What are the prerequisites for IS301 Systems Analysis and Design, and how many units is it?",
+        "question": "What are the prerequisites for IS 104 System Analysis & Design, and how many units is it?",
         "purpose": "Confirms the assistant answers correctly and cites the source when the answer IS in the knowledge base.",
     },
     {
@@ -71,7 +71,7 @@ TEST_CASES = [
         "label": "4. Ambiguous query (clarification prompt)",
         "prompt_key": "clarification",
         "question": "What subjects should I take next semester?",
-        "purpose": "No year/semester or completed-courses info given, and the corpus has 9 different terms. Confirms the assistant asks for the missing info instead of guessing a term.",
+        "purpose": "No year/semester or completed-courses info given, and the corpus has 8 different terms. Confirms the assistant asks for the missing info instead of guessing a term.",
     },
 ]
 

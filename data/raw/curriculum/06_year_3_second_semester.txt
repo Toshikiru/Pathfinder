@@ -1,23 +1,20 @@
-[SIMULATED DATA] This document is a realistic reconstruction for the Pathfinder capstone project. It is modeled on CHED Memorandum Order No. 25, s. 2015 (BSIS program standards) and adapted for Talibon Polytechnic College's BSIS program. It is NOT an official TPC document; TPC's actual registrar prospectus is not publicly available online. Course codes and exact wording are authored for this project.
+[REAL DATA] This is Talibon Polytechnic College's official BSIS curriculum checklist, effective A.Y. 2024-2025, based on CHED Memorandum Order No. 25, s. 2015 and CMO No. 20, s. 2013. Transcribed from a printed copy of the signed checklist (prepared by Flordelis A. Turtoga, MAMT, Program Head, BSIS; approved by the VP for Academic Affairs, VP for Administration, and College President). Every course code, title, unit/lecture/lab load, and prerequisite here is real, not invented - see docs/Data_Sources.md for full provenance.
 
 
 BSIS Curriculum Checklist - Year 3 - Second Semester
 Program: Bachelor of Science in Information Systems (BSIS)
 Talibon Polytechnic College
 
-Code      Course Title                                           Units  Prerequisite(s)
-IS306     Information Assurance and Security                     3      IS207
-IS307     Applications Development and Emerging Technologies 2   3      IS302
-IS308     IS Project Management 1                                3      IS303
-IS309     Methods of Research in Computing                       3      None
-IS310     IS Elective 3: Business Intelligence and Data Mining   3      IS205
-GE303     Foreign Language                                       3      None
+Code      Course Title                                           Units  Lec  Lab  Prerequisite(s)
+CAP 101   Capstone Project I                                     3      3    0    3rd Year Standing
+IS 106    IS Project Management                                  3      3    0    DM 102
+IS 107    Software Engineering                                   3      3    0    IS 106
+ISEL #3   IS Professional Elective #3                            3      3    0    ISEL #2
 
-Total units this term: 18
+Total units this term: 12 (Lecture: 12, Lab: 0)
 
 Prerequisite notes:
-- IS306 Information Assurance and Security: requires IS207 (Data Communications and Networking 1).
-- IS307 Applications Development and Emerging Technologies 2: requires IS302 (Applications Development and Emerging Technologies 1).
-- IS308 IS Project Management 1: requires IS303 (Business Process Management).
-- IS309 Methods of Research in Computing: no course prerequisite. Requires Junior standing (at least 90 units earned).
-- IS310 IS Elective 3: Business Intelligence and Data Mining: requires IS205 (Information Management 1). Professional elective slot.
+- CAP 101 Capstone Project I: requires 3rd Year Standing.
+- IS 106 IS Project Management: requires DM 102 (Quantitative Methods).
+- IS 107 Software Engineering: requires IS 106 (IS Project Management).
+- ISEL #3 IS Professional Elective #3: requires ISEL #2 (IS Professional Elective #2).

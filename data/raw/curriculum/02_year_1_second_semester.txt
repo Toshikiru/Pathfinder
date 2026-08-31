@@ -1,23 +1,25 @@
-[SIMULATED DATA] This document is a realistic reconstruction for the Pathfinder capstone project. It is modeled on CHED Memorandum Order No. 25, s. 2015 (BSIS program standards) and adapted for Talibon Polytechnic College's BSIS program. It is NOT an official TPC document; TPC's actual registrar prospectus is not publicly available online. Course codes and exact wording are authored for this project.
+[REAL DATA] This is Talibon Polytechnic College's official BSIS curriculum checklist, effective A.Y. 2024-2025, based on CHED Memorandum Order No. 25, s. 2015 and CMO No. 20, s. 2013. Transcribed from a printed copy of the signed checklist (prepared by Flordelis A. Turtoga, MAMT, Program Head, BSIS; approved by the VP for Academic Affairs, VP for Administration, and College President). Every course code, title, unit/lecture/lab load, and prerequisite here is real, not invented - see docs/Data_Sources.md for full provenance.
 
 
 BSIS Curriculum Checklist - Year 1 - Second Semester
 Program: Bachelor of Science in Information Systems (BSIS)
 Talibon Polytechnic College
 
-Code      Course Title                                           Units  Prerequisite(s)
-IS103     Fundamentals of Information Systems                    3      IS101
-IS104     Computer Programming 2 (Intermediate Programming)      3      IS102
-IS105     Web Systems and Technologies                           3      IS102
-GE104     Readings in Philippine History                         3      None
-GE105     Purposive Communication                                3      None
-PE102     Rhythmic Activities                                    2      None
-NSTP102   National Service Training Program 2                    3      NSTP101
+Code      Course Title                                           Units  Lec  Lab  Prerequisite(s)
+IS 101    Fundamentals of Information Systems                    3      3    0    CC 101
+CC 102    Computer Programming 2                                 3      2    3    CC 100
+HCI 1     Human Computer Interaction                             3      2    3    GECC 104
+GECC 105  Art Appreciation                                       3      3    0    None
+GEELEC 103Philippine Popular Culture                             3      3    0    None
+GECC 106  Science, Technology & Society                          3      3    0    None
+PATHFIT 2 Dance & Rhythmic Activities                            2      2    0    PATHFIT 1
+NSTP 2    LTS/CWTS 2                                             3      3    0    NSTP 1
 
-Total units this term: 20
+Total units this term: 23 (Lecture: 21, Lab: 6)
 
 Prerequisite notes:
-- IS103 Fundamentals of Information Systems: requires IS101 (Introduction to Computing). Introduces the IS discipline and how it differs from CS/IT.
-- IS104 Computer Programming 2 (Intermediate Programming): requires IS102 (Computer Programming 1 (Fundamentals of Programming)). Object-oriented programming concepts.
-- IS105 Web Systems and Technologies: requires IS102 (Computer Programming 1 (Fundamentals of Programming)).
-- NSTP102 National Service Training Program 2: requires NSTP101 (National Service Training Program 1).
+- IS 101 Fundamentals of Information Systems: requires CC 101 (Computer Programming 1).
+- CC 102 Computer Programming 2: requires CC 100 (Introduction to Computing).
+- HCI 1 Human Computer Interaction: requires GECC 104 (The Contemporary World).
+- PATHFIT 2 Dance & Rhythmic Activities: requires PATHFIT 1 (Physical Fitness and Health).
+- NSTP 2 LTS/CWTS 2: requires NSTP 1 (LTS/CWTS 1).

@@ -1,34 +1,46 @@
-[SIMULATED DATA] This document is a realistic reconstruction for the Pathfinder capstone project. It is modeled on CHED Memorandum Order No. 25, s. 2015 (BSIS program standards) and adapted for Talibon Polytechnic College's BSIS program. It is NOT an official TPC document; TPC's actual registrar prospectus is not publicly available online. Course codes and exact wording are authored for this project.
+[SIMULATED DATA] The official TPC BSIS curriculum checklist (see curriculum/*.txt) has no accompanying course-description catalog or student handbook, so this content is authored for this project. Course codes and titles referenced here are real (from the official checklist); the descriptive/policy wording itself is not an official TPC document. See docs/Data_Sources.md for full provenance.
 
 
 BSIS Course Description Catalog (excerpt)
 
-IS103 - Fundamentals of Information Systems
+IS 101 - Fundamentals of Information Systems
 Foundational course distinguishing Information Systems from Computer Science/IT; covers the role of IS in organizations.
 
-IS203 - Organization and Management Concepts
+IS 102 - Professional Issues in Information
+Covers ethical, legal, and professional issues IS practitioners face, including data privacy and professional conduct.
+
+IS 106 - IS Project Management
+Introduces project management fundamentals (scope, schedule, cost, risk) applied to IS/software projects.
+
+IS 109 - IS Strategy, Management and Acquisition
+Covers IT governance, sourcing/acquisition decisions, and aligning IS strategy with overall business strategy.
+
+BED 101 - Organization and Management Concepts
 Introduces organizational structures, management functions, and decision-making relevant to deploying IS in a business.
 
-IS303 - Business Process Management
+BED 102 - Financial Management
+Covers financial statement analysis, budgeting, and financial decision-making relevant to managing IS projects/departments.
+
+BED 103 - Business Process Management
 Covers modeling, analyzing, and improving business processes, and how IS supports process automation.
 
-IS308 - IS Project Management 1
-Introduces project management fundamentals (scope, schedule, cost) applied to IS/software projects.
+BED 104 - Evaluation of Business Performance
+Covers performance metrics and evaluation frameworks for assessing how well an organization (and its IS investments) are performing.
 
-IS402 - IS Project Management 2
-Advanced project management: risk management, stakeholder management, and agile approaches for IS projects.
+DM 101 - Discrete Mathematics
+Covers logic, set theory, combinatorics, and graph theory foundational to computing and algorithm analysis.
 
-IS304 - IS Elective 1: Enterprise Systems
-Elective covering ERP/enterprise system concepts and how large organizations integrate systems across departments.
+DM 102 - Quantitative Methods
+Covers statistical and quantitative analysis techniques used for business and IS decision-making.
 
-IS311 - IS Strategy, Management and Acquisition
-Covers IT governance, sourcing/acquisition decisions, and aligning IS strategy with business strategy.
+RESEARCH - Methods of Research
+Introduces research methodology (research design, data collection, analysis) needed to complete the Capstone Project.
 
-IS401 - Capstone Project 1
+CAP 101 - Capstone Project I
 First half of the two-term capstone: students form a team, propose a real-world IS project, and complete requirements/design.
 
-IS405 - Capstone Project 2
-Second half of the capstone: students implement, test, and defend the system proposed in Capstone Project 1.
+CAP 102 - Capstone Project II
+Second half of the capstone: students implement, test, and defend the system proposed in Capstone Project I.
 
-IS406 - Practicum / On-the-Job Training
+PRACTICUM - Practicum for Information Systems
 486-hour supervised work experience in an IS-related role at a partner company or organization.

@@ -90,13 +90,18 @@ git push
 **SHOW:** `docs/Data_Sources.md`
 
 **SAY:**
-> "We have 30 documents. 16 are real — we copied them straight from TPC's
-> website. The other 14 don't actually exist on the website. The real
-> subject list and grading rules are in a school handbook we couldn't fully
-> access online. So instead of making stuff up and pretending it's real, we
-> built those 14 documents using the actual national rules for BSIS
-> programs in the Philippines — and we clearly labeled every one of them
-> `[SIMULATED DATA]`, so nobody gets confused about what's real."
+> "We have 23 documents. 10 are real, copied straight from TPC's website —
+> just the BSIS program page and general campus info now, we dropped the
+> pages about other TPC degree programs since they didn't belong in a BSIS
+> advisor's knowledge base. Another 8 are also real — the official BSIS
+> curriculum checklist, the actual subject list with real course codes and
+> prerequisites, which isn't published online, so we got a printed, signed
+> copy directly and transcribed it. The remaining 5 — short course
+> descriptions and the grading/policy rules — genuinely aren't available
+> anywhere accessible (there's a school handbook we couldn't get past a
+> locked preview of), so we built those ourselves and clearly labeled every
+> one of them `[SIMULATED DATA]`, so nobody gets confused about what's
+> real."
 
 Now run the data pipeline, one step at a time:
 
@@ -201,7 +206,7 @@ python3 src/06_api_integration_demo.py
 Then it will say `Your question:` and wait for you to type. Try these,
 live, in front of everyone:
 
-- `What are the prerequisites for IS205 Information Management 1?`
+- `What are the prerequisites for CC 104 Information Management?`
   → it answers correctly and tells you where the answer came from
 - `How many units can I enroll in while on academic probation?`
   → it gives the exact number, 15

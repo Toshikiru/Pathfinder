@@ -1,4 +1,4 @@
-[SIMULATED DATA] This document is a realistic reconstruction for the Pathfinder capstone project. It is modeled on CHED Memorandum Order No. 25, s. 2015 (BSIS program standards) and adapted for Talibon Polytechnic College's BSIS program. It is NOT an official TPC document; TPC's actual registrar prospectus is not publicly available online. Course codes and exact wording are authored for this project.
+[SIMULATED DATA] The official TPC BSIS curriculum checklist (see curriculum/*.txt) has no accompanying course-description catalog or student handbook, so this content is authored for this project. Course codes and titles referenced here are real (from the official checklist); the descriptive/policy wording itself is not an official TPC document. See docs/Data_Sources.md for full provenance.
 
 BSIS Program - Grading System and GWA Policy
 

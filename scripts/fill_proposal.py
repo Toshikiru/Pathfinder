@@ -69,8 +69,8 @@ def main():
         "they have not completed, miscount their remaining units toward graduation, or simply "
         "do not find out about a policy (e.g. the probation unit cap) until it already affects "
         "them. Existing non-AI solutions - a static PDF/printed checklist and word-of-mouth "
-        "from advisers - cannot answer a specific, personalized question (\"Can I take IS301 "
-        "next term if I haven't passed IS205 yet?\") and cannot be queried outside office hours. "
+        "from advisers - cannot answer a specific, personalized question (\"Can I take CC 104 "
+        "next term if I haven't passed CC 103 yet?\") and cannot be queried outside office hours. "
         "Pathfinder addresses this by grounding a conversational assistant in TPC's actual "
         "BSIS curriculum structure and academic policies, so students get an accurate, "
         "cited answer to course-planning and degree-progress questions on demand."
@@ -92,18 +92,20 @@ def main():
 
     # 4. Dataset Source(s)
     set_para_text(d.paragraphs[19], (
-        "The knowledge base combines two kinds of sources, documented in full in "
+        "The knowledge base combines three kinds of sources, documented in full in "
         "docs/Data_Sources.md: (1) real content scraped from TPC's public website "
         "(tpc.edu.ph) - program descriptions, program leadership, admission requirements, "
-        "enrollment process, and student services info; and (2) a simulated BSIS curriculum "
-        "checklist and academic policy set, since TPC's actual registrar prospectus is not "
-        "published online. The simulated documents are modeled on CHED Memorandum Order "
-        "No. 25, s. 2015 (the real national policy standard for BSIS program design in the "
-        "Philippines) and are clearly labeled [SIMULATED DATA] in-file and in the README."
+        "enrollment process, and student services info; (2) TPC's official BSIS curriculum "
+        "checklist (effective A.Y. 2024-2025), transcribed from a printed, signed copy "
+        "obtained directly, since TPC does not publish it online - real course codes, "
+        "titles, units, and prerequisites, labeled [REAL DATA]; and (3) a simulated course-"
+        "description catalog and academic policy set (grading/GWA, enrollment/academic "
+        "standing), since TPC's full student handbook is not accessible, clearly labeled "
+        "[SIMULATED DATA] in-file and in the README."
     ))
-    set_para_after_label(d.paragraphs[21], "Plain text (.txt), scraped from HTML and generated from structured Python data.")
-    set_para_after_label(d.paragraphs[22], "tpc.edu.ph (public website, real) + a CHED CMO No. 25 s.2015 - based simulated curriculum/policy set (clearly labeled).")
-    set_para_after_label(d.paragraphs[23], "30 documents total: 16 real scraped pages + 9 curriculum-checklist documents + 3 course-description catalogs + 2 policy documents.")
+    set_para_after_label(d.paragraphs[21], "Plain text (.txt), scraped from HTML, transcribed from a printed document, and generated from structured Python data.")
+    set_para_after_label(d.paragraphs[22], "tpc.edu.ph (public website, real) + TPC's official BSIS curriculum checklist (real, printed copy) + a simulated course-description/policy set (clearly labeled).")
+    set_para_after_label(d.paragraphs[23], "23 documents total: 10 real scraped pages + 8 real curriculum-checklist documents + 3 course-description catalogs + 2 policy documents.")
 
     # 5. Success Criteria
     set_para_text(d.paragraphs[25], (
@@ -111,7 +113,7 @@ def main():
     ))
     set_para_after_label(d.paragraphs[27], "the system correctly cites the source document for at least 90% of course-planning/policy queries in the Checkpoint 3 demo set.")
     set_para_after_label(d.paragraphs[28], "retrieval latency (query embedding + similarity search) stays under 2 seconds on the full corpus.")
-    set_para_after_label(d.paragraphs[29], "the assistant correctly answers at least 5 realistic multi-part advising questions (e.g. \"Can I take IS301 if I haven't passed IS205?\") without hallucinating a course, code, or policy that isn't in the knowledge base.")
+    set_para_after_label(d.paragraphs[29], "the assistant correctly answers at least 5 realistic multi-part advising questions (e.g. \"Can I take CC 104 if I haven't passed CC 103?\") without hallucinating a course, code, or policy that isn't in the knowledge base.")
 
     # Insert 2 more criteria after para 29 to reach 5 total by cloning its XML.
     import copy

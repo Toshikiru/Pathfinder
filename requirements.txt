@@ -6,3 +6,10 @@ python-docx
 chromadb==1.5.9
 google-genai
 python-dotenv
+langchain-core==1.6.1
+langchain-google-genai==4.3.7
+langchain-chroma==1.1.0
+llama-index-core==0.14.24
+llama-index-vector-stores-chroma==0.5.5
+llama-index-embeddings-huggingface==0.7.0
+llama-index-llms-google-genai==0.10.0

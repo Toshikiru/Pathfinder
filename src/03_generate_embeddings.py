@@ -20,6 +20,7 @@ Model choice: sentence-transformers/all-MiniLM-L6-v2
 """
 
 import json
+import re
 from pathlib import Path
 
 import numpy as np
@@ -31,38 +32,45 @@ OUT_DIR = ROOT / "data" / "processed" / "_embeddings"
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
 # A handful of documents chosen to cover the three data categories
-# (real scraped page, simulated curriculum, simulated policy).
+# (real scraped page, real curriculum checklist, simulated policy).
 SAMPLE_DOCS = [
     "tpc_website/academics_bachelor-of-science-in-information-systems.txt",
     "curriculum/05_year_3_first_semester.txt",
-    "curriculum/course_descriptions_data_networks_security.txt",
+    "curriculum/course_descriptions_programming_and_systems.txt",
     "policies/enrollment_prerequisites_and_academic_standing.txt",
     "policies/grading_system_and_gwa_policy.txt",
 ]
 
 # Realistic advisor-bot queries used to sanity-check retrieval quality.
 SAMPLE_QUERIES = [
-    "What are the prerequisites for Systems Analysis and Design?",
+    "What are the prerequisites for CC 105 Application Development and Emerging Technologies?",
     "How many units can I enroll in if I'm on academic probation?",
-    "What courses cover database design?",
+    "What does CC 104 Information Management cover?",
     "Who is the program head of BSIS?",
     "What GWA do I need for Latin honors?",
 ]
 
 
+SENTENCE_END = re.compile(r"(?<=[.!?])\s+")
+
+
 def chunk_text(text: str, max_chars: int = 500) -> list[str]:
-    """Simple paragraph-aware chunking: group lines until max_chars, break on blank-ish gaps."""
-    lines = [l for l in text.split("\n") if l.strip()]
-    chunks, current = [], []
-    current_len = 0
-    for line in lines:
-        if current_len + len(line) > max_chars and current:
-            chunks.append("\n".join(current))
+    """Sentence-aware chunking: joins wrapped lines back into sentences, then
+    groups whole sentences into chunks up to max_chars. Never splits a
+    sentence across two chunks - the naive line/char-count version used to
+    (e.g. cutting "...Latin honors" / "eligibility requires a GWA of 1.75..."
+    into separate chunks), which silently degraded retrieval accuracy."""
+    joined = " ".join(l.strip() for l in text.split("\n") if l.strip())
+    sentences = [s.strip() for s in SENTENCE_END.split(joined) if s.strip()]
+    chunks, current, current_len = [], [], 0
+    for sent in sentences:
+        if current_len + len(sent) > max_chars and current:
+            chunks.append(" ".join(current))
             current, current_len = [], 0
-        current.append(line)
-        current_len += len(line)
+        current.append(sent)
+        current_len += len(sent) + 1
     if current:
-        chunks.append("\n".join(current))
+        chunks.append(" ".join(current))
     return chunks
 
 

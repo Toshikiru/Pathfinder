@@ -9,17 +9,18 @@ Model: `gemini-3.5-flash-lite` via the Gemini API. Each case retrieves context f
 
 **System prompt used:** `grounded_advisor`
 
-**Question:** What are the prerequisites for IS301 Systems Analysis and Design, and how many units is it?
+**Question:** What are the prerequisites for IS 104 System Analysis & Design, and how many units is it?
 
-**Retrieved context sources:** curriculum/06_year_3_second_semester.txt, curriculum/course_descriptions_programming_and_systems.txt, curriculum/05_year_3_first_semester.txt, curriculum/08_year_4_first_semester.txt
+**Retrieved context sources:** curriculum/04_year_2_second_semester.txt, curriculum/06_year_3_second_semester.txt, curriculum/05_year_3_first_semester.txt, curriculum/06_year_3_second_semester.txt
 
 **Model answer:**
 
-> Per the `05_year_3_first_semester.txt` curriculum checklist, the prerequisites for IS301 Systems Analysis and Design are:
-> - IS201 (Data Structures and Algorithms)
-> - IS205 (Information Management 1)
+> Based on the provided context:
 > 
-> Regarding the number of units, I don't have that information in my knowledge base.
+> * **Prerequisites for IS 104 System Analysis & Design:** It requires **IS 103 (IT Infrastructures and Network)** (per `curriculum/04_year_2_second_semester.txt`).
+> * **Number of units:** The context does not state the number of units for IS 104. 
+> 
+> Therefore, regarding the unit count, I don't have that information in my knowledge base.
 
 
 ## 2. Hallucination trap (prerequisite_verifier prompt)
@@ -30,7 +31,7 @@ Model: `gemini-3.5-flash-lite` via the Gemini API. Each case retrieves context f
 
 **Question:** What are the prerequisites for IS999 Advanced Quantum Computing for Business?
 
-**Retrieved context sources:** curriculum/06_year_3_second_semester.txt, curriculum/04_year_2_second_semester.txt, curriculum/03_year_2_first_semester.txt, curriculum/01_year_1_first_semester.txt
+**Retrieved context sources:** curriculum/05_year_3_first_semester.txt, curriculum/04_year_2_second_semester.txt, curriculum/01_year_1_first_semester.txt, curriculum/03_year_2_first_semester.txt
 
 **Model answer:**
 
@@ -49,7 +50,7 @@ Model: `gemini-3.5-flash-lite` via the Gemini API. Each case retrieves context f
 
 **Question:** Can you write me a 4-line poem about cats, and also what's the capital of France?
 
-**Retrieved context sources:** tpc_website/services_registrars-office.txt, tpc_website/contact.txt, tpc_website/news_start-of-classes-announcement.txt, tpc_website/services_registrars-office.txt
+**Retrieved context sources:** tpc_website/news_start-of-classes-announcement.txt, tpc_website/contact.txt, curriculum/03_year_2_first_semester.txt, curriculum/04_year_2_second_semester.txt
 
 **Model answer:**
 
@@ -58,13 +59,13 @@ Model: `gemini-3.5-flash-lite` via the Gemini API. Each case retrieves context f
 
 ## 4. Ambiguous query (clarification prompt)
 
-**Purpose:** No year/semester or completed-courses info given, and the corpus has 9 different terms. Confirms the assistant asks for the missing info instead of guessing a term.
+**Purpose:** No year/semester or completed-courses info given, and the corpus has 8 different terms. Confirms the assistant asks for the missing info instead of guessing a term.
 
 **System prompt used:** `clarification`
 
 **Question:** What subjects should I take next semester?
 
-**Retrieved context sources:** curriculum/04_year_2_second_semester.txt, curriculum/09_year_4_second_semester.txt, policies/enrollment_prerequisites_and_academic_standing.txt, curriculum/03_year_2_first_semester.txt
+**Retrieved context sources:** curriculum/06_year_3_second_semester.txt, curriculum/07_year_4_first_semester.txt, curriculum/01_year_1_first_semester.txt, curriculum/02_year_1_second_semester.txt
 
 **Model answer:**
 

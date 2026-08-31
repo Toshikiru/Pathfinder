@@ -39,25 +39,31 @@ answers").
 - Rule 3 requires source attribution so a student can verify the claim, not
   just trust it.
 
-**Example (real transcript):** *"What are the prerequisites for IS301
-Systems Analysis and Design, and how many units is it?"*
+**Example (real transcript):** *"What are the prerequisites for IS 104
+System Analysis & Design, and how many units is it?"*
 
-> Per the `05_year_3_first_semester.txt` curriculum checklist, the
-> prerequisites for IS301 Systems Analysis and Design are:
-> - IS201 (Data Structures and Algorithms)
-> - IS205 (Information Management 1)
+> Based on the provided context:
 >
-> Regarding the number of units, I don't have that information in my
-> knowledge base.
+> * **Prerequisite for IS 104 System Analysis & Design:** It requires IS 103
+>   (IT Infrastructures and Network) (per
+>   `curriculum/04_year_2_second_semester.txt`).
+> * **Number of units:** The provided context does not contain information
+>   about the unit count for IS 104.
+>
+> I don't have that information in my knowledge base regarding the unit
+> count.
 
-Note the second half: the retrieved chunk *did* contain "IS301 ... 3 ..." in
-a table row, but the model treated the unit count as not confidently
-extractable from the chunk boundary it saw and declined rather than
-guessing. That's the rule working — arguably over-cautious here, but the
-failure mode we designed against (confidently inventing a unit count) did
-not happen. This is a concrete data point for Checkpoint 3: tighter
-chunking (so a full table row never gets split) should improve completeness
-without touching the prompt.
+The prerequisite half is correct and cited (this uses the real TPC BSIS
+curriculum checklist, incorporated this checkpoint — see
+`docs/Data_Sources.md`). The unit-count half declines rather than guesses:
+the retrieved chunks for this query didn't happen to include the specific
+table row carrying IS 104's own unit count (a retrieval-coverage gap, not a
+chunk-splitting bug — the earlier version of `chunk_text()` used to also
+*split* answers across chunk boundaries, which was fixed in
+`03_generate_embeddings.py`/`04_setup_vector_db.py` this checkpoint; see
+`docs/_rag_app_demo_transcripts.md` for a case where that fix's benefit is
+visible directly). Either way, the guardrail worked: no unit count was
+invented.
 
 ---
 
@@ -74,11 +80,12 @@ missing answer is visually obvious rather than buried in prose.
   "Not found in provided context") rather than open-ended, so the model
   can't hedge with vague confidence language that still implies an answer.
 - Rule 4 explicitly forbids "reasonable assumption about typical curricula"
-  — anticipating that a model might reason "well, IS301 is a systems course,
-  it probably needs Data Structures" even without that being in context.
+  — anticipating that a model might reason "well, IS 104 is a systems course,
+  it probably needs Data Structures and Algorithms" even without that being
+  in context.
 
 **Example (real transcript) — hallucination trap:** the corpus was queried
-with a course code that does not exist anywhere in the 30-document knowledge
+with a course code that does not exist anywhere in the 23-document knowledge
 base: *"What are the prerequisites for IS999 Advanced Quantum Computing for
 Business?"*
 
@@ -123,7 +130,7 @@ question in one pass, without answering either.
 ## 4. `clarification` — ambiguity handling
 
 **Purpose:** a distinct failure mode from hallucination: the model *could*
-answer confidently by silently picking one of the 9 terms in the corpus and
+answer confidently by silently picking one of the 8 terms in the corpus and
 presenting it as "the" answer, which would be wrong for most students asking
 a term-dependent question without saying which term they mean. This prompt
 makes the assistant recognize when a question is underspecified and ask
@@ -136,9 +143,9 @@ semester?"* — no year, semester, or completed-courses information given.
 > Which year and semester are you currently in, or which courses have you
 > already completed?
 
-The retrieved context (via semantic search) happened to include Year 2 Sem 2
-and Year 4 Sem 2 curriculum chunks — a naive grounded-answer prompt would
-likely have picked one and answered as if it applied universally. This
+The retrieved context (via semantic search) happened to include Year 3 Sem 2,
+Year 4 Sem 1, and Year 1 curriculum chunks — a naive grounded-answer prompt
+would likely have picked one and answered as if it applied universally. This
 prompt caught the ambiguity instead.
 
 ---

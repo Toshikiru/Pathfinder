@@ -1,12 +1,8 @@
-[SIMULATED DATA] This document is a realistic reconstruction for the Pathfinder capstone project. It is modeled on CHED Memorandum Order No. 25, s. 2015 (BSIS program standards) and adapted for Talibon Polytechnic College's BSIS program. It is NOT an official TPC document; TPC's actual registrar prospectus is not publicly available online. Course codes and exact wording are authored for this project.
+[SIMULATED DATA] The official TPC BSIS curriculum checklist (see curriculum/*.txt) has no accompanying course-description catalog or student handbook, so this content is authored for this project. Course codes and titles referenced here are real (from the official checklist); the descriptive/policy wording itself is not an official TPC document. See docs/Data_Sources.md for full provenance.
 BSIS Course Description Catalog (excerpt)
-IS205 - Information Management 1
-Covers relational database design, normalization, SQL, and an introduction to data modeling for information systems.
-IS207 - Data Communications and Networking 1
-Introduces networking fundamentals: OSI/TCP-IP models, IP addressing, and basic network configuration.
-IS306 - Information Assurance and Security
-Covers security fundamentals: confidentiality/integrity/availability, common threats, and basic risk management for information systems.
-IS305 - IS Elective 2: IT Security Fundamentals
-Elective deep-dive into authentication, access control, and secure system design practices.
-IS310 - IS Elective 3: Business Intelligence and Data Mining
-Elective covering data warehousing basics, OLAP concepts, and introductory data mining/analytics techniques for business decision-making.
+IS 103 - IT Infrastructures and Network
+Introduces networking fundamentals and IT infrastructure: OSI/TCP-IP models, IP addressing, servers, and basic network configuration.
+IS 105 - Enterprise Architecture
+Covers modeling an organization's IT systems, data, and processes as an integrated enterprise architecture aligned with business strategy.
+IS 108 - IT Security and Management
+Covers information security fundamentals (confidentiality/integrity/availability, common threats) and managing security within an organization.

@@ -1,129 +1,120 @@
 [
   {
     "source": "curriculum/01_year_1_first_semester.txt",
-    "raw_chars": 1463,
-    "raw_lines": 21,
-    "cleaned_chars": 1160,
-    "cleaned_lines": 15,
-    "token_count": 166,
-    "unique_tokens": 106
+    "raw_chars": 1746,
+    "raw_lines": 23,
+    "cleaned_chars": 1226,
+    "cleaned_lines": 17,
+    "token_count": 218,
+    "unique_tokens": 124
   },
   {
     "source": "curriculum/02_year_1_second_semester.txt",
-    "raw_chars": 1756,
-    "raw_lines": 23,
-    "cleaned_chars": 1455,
-    "cleaned_lines": 17,
-    "token_count": 201,
-    "unique_tokens": 110
+    "raw_chars": 1939,
+    "raw_lines": 25,
+    "cleaned_chars": 1512,
+    "cleaned_lines": 19,
+    "token_count": 252,
+    "unique_tokens": 128
   },
   {
     "source": "curriculum/03_year_2_first_semester.txt",
-    "raw_chars": 1510,
-    "raw_lines": 21,
-    "cleaned_chars": 1175,
-    "cleaned_lines": 15,
-    "token_count": 169,
-    "unique_tokens": 112
+    "raw_chars": 2092,
+    "raw_lines": 26,
+    "cleaned_chars": 1674,
+    "cleaned_lines": 20,
+    "token_count": 271,
+    "unique_tokens": 127
   },
   {
     "source": "curriculum/04_year_2_second_semester.txt",
-    "raw_chars": 1728,
-    "raw_lines": 24,
-    "cleaned_chars": 1380,
-    "cleaned_lines": 18,
-    "token_count": 194,
-    "unique_tokens": 110
+    "raw_chars": 2157,
+    "raw_lines": 27,
+    "cleaned_chars": 1758,
+    "cleaned_lines": 21,
+    "token_count": 283,
+    "unique_tokens": 138
   },
   {
     "source": "curriculum/05_year_3_first_semester.txt",
-    "raw_chars": 1900,
-    "raw_lines": 24,
-    "cleaned_chars": 1585,
-    "cleaned_lines": 18,
-    "token_count": 222,
-    "unique_tokens": 114
+    "raw_chars": 2007,
+    "raw_lines": 25,
+    "cleaned_chars": 1637,
+    "cleaned_lines": 19,
+    "token_count": 263,
+    "unique_tokens": 126
   },
   {
     "source": "curriculum/06_year_3_second_semester.txt",
-    "raw_chars": 1711,
-    "raw_lines": 23,
-    "cleaned_chars": 1461,
-    "cleaned_lines": 17,
-    "token_count": 207,
-    "unique_tokens": 109
-  },
-  {
-    "source": "curriculum/07_year_3_summer_term.txt",
-    "raw_chars": 1038,
-    "raw_lines": 16,
-    "cleaned_chars": 913,
-    "cleaned_lines": 10,
-    "token_count": 132,
-    "unique_tokens": 83
-  },
-  {
-    "source": "curriculum/08_year_4_first_semester.txt",
-    "raw_chars": 1491,
+    "raw_chars": 1497,
     "raw_lines": 20,
-    "cleaned_chars": 1227,
+    "cleaned_chars": 1230,
     "cleaned_lines": 14,
-    "token_count": 180,
-    "unique_tokens": 105
+    "token_count": 202,
+    "unique_tokens": 106
   },
   {
-    "source": "curriculum/09_year_4_second_semester.txt",
-    "raw_chars": 1119,
-    "raw_lines": 17,
+    "source": "curriculum/07_year_4_first_semester.txt",
+    "raw_chars": 1530,
+    "raw_lines": 20,
+    "cleaned_chars": 1298,
+    "cleaned_lines": 14,
+    "token_count": 213,
+    "unique_tokens": 112
+  },
+  {
+    "source": "curriculum/08_year_4_second_semester.txt",
+    "raw_chars": 1025,
+    "raw_lines": 14,
     "cleaned_chars": 922,
-    "cleaned_lines": 11,
-    "token_count": 141,
-    "unique_tokens": 90
+    "cleaned_lines": 8,
+    "token_count": 143,
+    "unique_tokens": 91
   },
   {
     "source": "curriculum/course_descriptions_data_networks_security.txt",
-    "raw_chars": 1270,
-    "raw_lines": 19,
-    "cleaned_chars": 1262,
-    "cleaned_lines": 12,
-    "token_count": 169,
-    "unique_tokens": 114
+    "raw_chars": 967,
+    "raw_lines": 13,
+    "cleaned_chars": 961,
+    "cleaned_lines": 8,
+    "token_count": 130,
+    "unique_tokens": 89
   },
   {
     "source": "curriculum/course_descriptions_is_management_and_capstone.txt",
-    "raw_chars": 1931,
-    "raw_lines": 34,
-    "cleaned_chars": 1918,
-    "cleaned_lines": 22,
-    "token_count": 266,
-    "unique_tokens": 155
+    "raw_chars": 2569,
+    "raw_lines": 46,
+    "cleaned_chars": 2552,
+    "cleaned_lines": 30,
+    "token_count": 350,
+    "unique_tokens": 179
   },
   {
     "source": "curriculum/course_descriptions_programming_and_systems.txt",
-    "raw_chars": 1759,
-    "raw_lines": 25,
-    "cleaned_chars": 1749,
-    "cleaned_lines": 16,
-    "token_count": 237,
-    "unique_tokens": 156
+    "raw_chars": 2080,
+    "raw_lines": 34,
+    "cleaned_chars": 2067,
+    "cleaned_lines": 22,
+    "token_count": 278,
+    "unique_tokens": 179
   },
   {
     "source": "policies/enrollment_prerequisites_and_academic_standing.txt",
-    "raw_chars": 1992,
-    "raw_lines": 33,
-    "cleaned_chars": 1975,
-    "cleaned_lines": 27,
-    "token_count": 325,
-    "unique_tokens": 160
+    "raw_chars": 2031,
+    "raw_lines": 34,
+    "cleaned_chars": 2014,
+    "cleaned_lines": 28,
+    "token_count": 327,
+    "unique_tokens": 156
   },
   {
     "source": "policies/grading_system_and_gwa_policy.txt",
-    "raw_chars": 1299,
+    "raw_chars": 1289,
     "raw_lines": 20,
-    "cleaned_chars": 1260,
+    "cleaned_chars": 1250,
     "cleaned_lines": 15,
-    "token_count": 222,
-    "unique_tokens": 136
+    "token_count": 220,
+    "unique_tokens": 133
   },
   {
     "source": "tpc_website/academics.txt",
@@ -133,60 +124,6 @@
     "cleaned_lines": 46,
     "token_count": 406,
     "unique_tokens": 162
-  },
-  {
-    "source": "tpc_website/academics_bachelor-in-early-childhood-education.txt",
-    "raw_chars": 1753,
-    "raw_lines": 78,
-    "cleaned_chars": 773,
-    "cleaned_lines": 22,
-    "token_count": 124,
-    "unique_tokens": 86
-  },
-  {
-    "source": "tpc_website/academics_bachelor-of-arts-in-english-language.txt",
-    "raw_chars": 1755,
-    "raw_lines": 78,
-    "cleaned_chars": 776,
-    "cleaned_lines": 22,
-    "token_count": 123,
-    "unique_tokens": 80
-  },
-  {
-    "source": "tpc_website/academics_bachelor-of-arts-in-political-science.txt",
-    "raw_chars": 1729,
-    "raw_lines": 78,
-    "cleaned_chars": 749,
-    "cleaned_lines": 22,
-    "token_count": 116,
-    "unique_tokens": 77
-  },
-  {
-    "source": "tpc_website/academics_bachelor-of-science-in-accounting-information-systems.txt",
-    "raw_chars": 1841,
-    "raw_lines": 78,
-    "cleaned_chars": 845,
-    "cleaned_lines": 22,
-    "token_count": 127,
-    "unique_tokens": 81
-  },
-  {
-    "source": "tpc_website/academics_bachelor-of-science-in-agriculture.txt",
-    "raw_chars": 1738,
-    "raw_lines": 78,
-    "cleaned_chars": 761,
-    "cleaned_lines": 22,
-    "token_count": 118,
-    "unique_tokens": 78
-  },
-  {
-    "source": "tpc_website/academics_bachelor-of-science-in-criminology.txt",
-    "raw_chars": 1730,
-    "raw_lines": 78,
-    "cleaned_chars": 753,
-    "cleaned_lines": 22,
-    "token_count": 118,
-    "unique_tokens": 79
   },
   {
     "source": "tpc_website/academics_bachelor-of-science-in-information-systems.txt",

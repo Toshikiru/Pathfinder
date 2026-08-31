@@ -1,19 +1,19 @@
 {
   "What are the prerequisites for Systems Analysis and Design?": {
     "cosine_top": [
-      "curriculum/course_descriptions_programming_and_systems.txt",
       "curriculum/04_year_2_second_semester.txt",
-      "curriculum/05_year_3_first_semester.txt"
+      "curriculum/05_year_3_first_semester.txt",
+      "curriculum/08_year_4_second_semester.txt"
     ],
     "euclidean_top": [
-      "curriculum/course_descriptions_programming_and_systems.txt",
       "curriculum/04_year_2_second_semester.txt",
-      "curriculum/05_year_3_first_semester.txt"
+      "curriculum/05_year_3_first_semester.txt",
+      "curriculum/08_year_4_second_semester.txt"
     ],
     "dot_product_top": [
-      "curriculum/course_descriptions_programming_and_systems.txt",
       "curriculum/04_year_2_second_semester.txt",
-      "curriculum/05_year_3_first_semester.txt"
+      "curriculum/05_year_3_first_semester.txt",
+      "curriculum/08_year_4_second_semester.txt"
     ],
     "agreement_cosine_vs_euclidean": true,
     "agreement_cosine_vs_dot": true
@@ -41,17 +41,17 @@
     "cosine_top": [
       "tpc_website/academics_bachelor-of-science-in-information-systems.txt",
       "tpc_website/academics.txt",
-      "curriculum/03_year_2_first_semester.txt"
+      "curriculum/04_year_2_second_semester.txt"
     ],
     "euclidean_top": [
       "tpc_website/academics_bachelor-of-science-in-information-systems.txt",
       "tpc_website/academics.txt",
-      "curriculum/03_year_2_first_semester.txt"
+      "curriculum/04_year_2_second_semester.txt"
     ],
     "dot_product_top": [
       "tpc_website/academics_bachelor-of-science-in-information-systems.txt",
       "tpc_website/academics.txt",
-      "curriculum/03_year_2_first_semester.txt"
+      "curriculum/04_year_2_second_semester.txt"
     ],
     "agreement_cosine_vs_euclidean": true,
     "agreement_cosine_vs_dot": true

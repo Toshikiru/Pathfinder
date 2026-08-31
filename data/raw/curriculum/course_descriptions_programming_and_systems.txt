@@ -1,25 +1,34 @@
-[SIMULATED DATA] This document is a realistic reconstruction for the Pathfinder capstone project. It is modeled on CHED Memorandum Order No. 25, s. 2015 (BSIS program standards) and adapted for Talibon Polytechnic College's BSIS program. It is NOT an official TPC document; TPC's actual registrar prospectus is not publicly available online. Course codes and exact wording are authored for this project.
+[SIMULATED DATA] The official TPC BSIS curriculum checklist (see curriculum/*.txt) has no accompanying course-description catalog or student handbook, so this content is authored for this project. Course codes and titles referenced here are real (from the official checklist); the descriptive/policy wording itself is not an official TPC document. See docs/Data_Sources.md for full provenance.
 
 
 BSIS Course Description Catalog (excerpt)
 
-IS102 - Computer Programming 1 (Fundamentals of Programming)
-Introduces problem-solving through programming using variables, control structures, functions, and basic data types. Students write and debug small console programs.
+CC 100 - Introduction to Computing
+Foundational course covering computer hardware/software basics, number systems, and problem-solving concepts before formal programming begins.
 
-IS104 - Computer Programming 2 (Intermediate Programming)
-Builds on IS102 with object-oriented programming: classes, objects, inheritance, and polymorphism, plus an intro to error handling.
+CC 101 - Computer Programming 1
+Introduces programming fundamentals: variables, control structures, functions, and basic data types through small console programs.
 
-IS201 - Data Structures and Algorithms
+CC 102 - Computer Programming 2
+Builds on CC 101 with object-oriented programming: classes, objects, inheritance, and polymorphism.
+
+CC 103 - Data Structures and Algorithms
 Covers arrays, linked lists, stacks, queues, trees, and sorting/searching algorithms, with emphasis on choosing the right structure for a problem.
 
-IS301 - Systems Analysis and Design
+CC 104 - Information Management
+Covers relational database design, normalization, SQL, and data modeling for information systems.
+
+CC 105 - Application Development and Emerging Technologies
+Hands-on application-building course integrating current tools/platforms (e.g. APIs, cloud, or mobile) into a working multi-module system.
+
+IPT 101 - Integrative Programming and Technologies
+Covers integrating multiple programming languages/technologies (e.g. a web front end, backend services, and APIs) into one cohesive application.
+
+HCI 1 - Human Computer Interaction
+Covers usability principles, interface design, and evaluating software from the end user's perspective.
+
+IS 104 - System Analysis & Design
 Teaches requirements gathering, process modeling (DFDs, use cases), and translating business needs into system specifications.
 
-IS302 - Applications Development and Emerging Technologies 1
-Hands-on application-building course; students design and implement a small multi-module software system.
-
-IS307 - Applications Development and Emerging Technologies 2
-Continuation of IS302 with a focus on integrating emerging technologies (APIs, cloud services, or mobile platforms) into an application.
-
-IS403 - IS Elective 4: Mobile and Web Application Development
-Elective focused on building deployable mobile or web applications end-to-end, including UI/UX considerations.
+IS 107 - Software Engineering
+Covers the software development lifecycle, methodologies (e.g. Agile/Scrum), and software quality/testing practices.

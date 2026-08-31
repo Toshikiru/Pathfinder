@@ -1,0 +1,14 @@
+[REAL DATA] This is Talibon Polytechnic College's official BSIS curriculum checklist, effective A.Y. 2024-2025, based on CHED Memorandum Order No. 25, s. 2015 and CMO No. 20, s. 2013. Transcribed from a printed copy of the signed checklist (prepared by Flordelis A. Turtoga, MAMT, Program Head, BSIS; approved by the VP for Academic Affairs, VP for Administration, and College President). Every course code, title, unit/lecture/lab load, and prerequisite here is real, not invented - see docs/Data_Sources.md for full provenance.
+BSIS Curriculum Checklist - Year 4 - First Semester
+Program: Bachelor of Science in Information Systems (BSIS)
+Code Course Title Units Lec Lab Prerequisite(s)
+CAP 102 Capstone Project II 3 3 0 CAP 101
+IS 109 IS Strategy, Management and Acquisition 3 3 0 IS 106
+ISEL #4 IS Professional Elective #4 3 3 0 ISEL #3
+SFT 101 Seminar/Educational Tour/Field Trip 1 0 0 4th Year Standing
+Total units this term: 10 (Lecture: 9, Lab: 0)
+Prerequisite notes:
+- CAP 102 Capstone Project II: requires CAP 101 (Capstone Project I).
+- IS 109 IS Strategy, Management and Acquisition: requires IS 106 (IS Project Management).
+- ISEL #4 IS Professional Elective #4: requires ISEL #3 (IS Professional Elective #3).
+- SFT 101 Seminar/Educational Tour/Field Trip: requires 4th Year Standing.

@@ -1,0 +1,14 @@
+[REAL DATA] This is Talibon Polytechnic College's official BSIS curriculum checklist, effective A.Y. 2024-2025, based on CHED Memorandum Order No. 25, s. 2015 and CMO No. 20, s. 2013. Transcribed from a printed copy of the signed checklist (prepared by Flordelis A. Turtoga, MAMT, Program Head, BSIS; approved by the VP for Academic Affairs, VP for Administration, and College President). Every course code, title, unit/lecture/lab load, and prerequisite here is real, not invented - see docs/Data_Sources.md for full provenance.
+
+
+BSIS Curriculum Checklist - Year 4 - Second Semester
+Program: Bachelor of Science in Information Systems (BSIS)
+Talibon Polytechnic College
+
+Code      Course Title                                           Units  Lec  Lab  Prerequisite(s)
+PRACTICUM Practicum for Information Systems (486 Hours)          6      0    0    4th Year Standing
+
+Total units this term: 6 (Lecture: 0, Lab: 0)
+
+Prerequisite notes:
+- PRACTICUM Practicum for Information Systems (486 Hours): requires 4th Year Standing.
