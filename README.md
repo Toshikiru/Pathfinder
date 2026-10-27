@@ -25,7 +25,9 @@ interpreting GWA is a degree-progress question, not a separate topic.
       automated ingestion pipeline, LangChain-orchestrated RAG app with
       multi-turn memory, LlamaIndex comparison demo, framework comparison
       note. *Complete — see below.*
-- [ ] Checkpoint 4 — Customization, Deployment & Final Defense (Final)
+- [x] **Checkpoint 4 — Customization, Deployment & Final Defense** (Final): Streamlit
+      interface, multi-stage Dockerfile, CI/CD to a Hugging Face Space, model customization
+      note, final technical report. *Complete — see below.*
 
 ## Repository layout
 
@@ -38,6 +40,14 @@ data/
     policies/           2 simulated academic-policy docs
   processed/             output of 02_preprocess.py (cleaned text + _manifest.json)
     _embeddings/          output of 03_generate_embeddings.py (sample chunk vectors)
+app/
+  streamlit_app.py                 CP4: Streamlit chat UI wrapping the CP3 RAG session
+tests/
+  smoke_test.py                    CP4: offline retrieval/term-detection tests (run in CI + in the image)
+  measure_retrieval_latency.py     CP4: checks the < 2 s retrieval success criterion
+Dockerfile, .dockerignore          CP4: multi-stage build (index baked in at build time)
+requirements-app.txt               CP4: runtime-only dependencies for the image
+.github/workflows/ci-cd.yml        CP4: build + test + deploy to Hugging Face Space
 src/
   00_generate_curriculum_data.py   writes the real curriculum checklist + simulated descriptions/policy documents
   01_extract_raw_text.py           HTML -> raw text (BeautifulSoup)
@@ -63,6 +73,10 @@ docs/
   _distance_metric_results.json    raw results referenced by Distance_Metric_Comparison.md
   _rag_app_demo_transcripts.md     raw multi-turn transcripts from 08_rag_app.py
   Presentation_Guide_CP1_CP2.md    step-by-step run-of-show for demoing CP1+CP2 live
+  Model_Customization_Note.md      Checkpoint 4 deliverable (PEFT/LoRA reasoning)
+  Deployment_Guide.md              Checkpoint 4 deliverable (Docker, secrets, deployment evidence)
+  Final_Technical_Report.md        Checkpoint 4 deliverable
+  Presentation_Guide_CP4_Final_Defense.md   run-of-show, demo script, defense Q&A
 ```
 
 ## Data sources (summary — full detail in [docs/Data_Sources.md](docs/Data_Sources.md))
@@ -150,6 +164,24 @@ require `GEMINI_API_KEY` in `.env`.
 `09_llamaindex_comparison.py` is comparison-only, not used in production —
 see [docs/Framework_Comparison_Note.md](docs/Framework_Comparison_Note.md)
 for why LangChain was chosen for the app and what the LlamaIndex demo showed.
+
+## Running the Checkpoint 4 app (web UI + Docker)
+
+```bash
+# Local (no Docker)
+pip install -r requirements.txt && pip install streamlit
+streamlit run app/streamlit_app.py            # builds the index on first run if missing
+
+# Docker (what gets deployed)
+docker build -t pathfinder .
+docker run --rm -p 7860:7860 -e GEMINI_API_KEY=<your-key> pathfinder    # http://localhost:7860
+docker run --rm pathfinder python tests/smoke_test.py                   # offline tests, no key
+```
+
+The image builds the Chroma index at build time and never contains the API key — it is injected at
+run time. CI/CD (`.github/workflows/ci-cd.yml`) builds + tests every push and deploys `main` to a
+Hugging Face Space. Full setup, secrets handling and the evidence checklist:
+[docs/Deployment_Guide.md](docs/Deployment_Guide.md). **Live demo:** _add your Space URL here_.
 
 ## Team
 

@@ -1,0 +1,27 @@
+# VCS / CI
+.git
+.github
+
+# Secrets - never bake into an image
+.env
+.env.*
+!.env.example
+
+# Python / local artefacts
+__pycache__/
+*.pyc
+.venv/
+venv/
+.cache/
+
+# Rebuilt inside the image (Dockerfile builder stage)
+data/chroma_db/
+
+# Not needed at runtime
+data/raw/
+data/processed/_embeddings/
+docs/
+scripts/
+*.pdf
+*.docx
+README.md

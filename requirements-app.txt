@@ -1,0 +1,11 @@
+# Runtime-only dependencies for the deployed app / Docker image.
+# (The full development set - scraping, python-docx, LlamaIndex comparison -
+#  stays in requirements.txt.) Versions match requirements.txt where shared.
+chromadb==1.5.9
+sentence-transformers==6.0.0
+langchain-core==1.6.1
+langchain-google-genai==4.3.7
+langchain-chroma==1.1.0
+python-dotenv
+numpy
+streamlit==1.66.0

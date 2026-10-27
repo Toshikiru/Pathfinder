@@ -1,0 +1,81 @@
+name: CI/CD
+
+# Checkpoint 4, Deliverable 18 - CI/CD step.
+#   build-test : every push / PR -> build the Docker image, run offline smoke
+#                tests inside it, start the container and hit its health endpoint.
+#   deploy     : pushes to main only -> publish to a Hugging Face Space (Docker SDK).
+#
+# One-time setup (GitHub repo -> Settings -> Secrets and variables -> Actions):
+#   secret   HF_TOKEN   Hugging Face access token with WRITE permission
+#   variable HF_SPACE   "<hf-username>/<space-name>", e.g. toshi/pathfinder-advisor
+# The Gemini key is NOT a GitHub secret: set GEMINI_API_KEY as a *Space secret*
+# on huggingface.co (Space -> Settings -> Variables and secrets).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build image (multi-stage)
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          load: true
+          tags: pathfinder:ci
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Offline smoke tests inside the image (no API key)
+        run: docker run --rm pathfinder:ci python tests/smoke_test.py
+
+      - name: Start container and check health endpoint
+        run: |
+          docker run -d --name pathfinder -p 7860:7860 -e GEMINI_API_KEY=ci-dummy-key pathfinder:ci
+          for i in $(seq 1 40); do
+            if curl -fs http://localhost:7860/_stcore/health; then echo; echo "healthy"; exit 0; fi
+            sleep 3
+          done
+          echo "container never became healthy"; exit 1
+
+      - name: Container logs (on failure)
+        if: failure()
+        run: docker logs pathfinder || true
+
+  deploy:
+    needs: build-test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Push to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_SPACE: ${{ vars.HF_SPACE }}
+        run: |
+          if [ -z "$HF_TOKEN" ] || [ -z "$HF_SPACE" ]; then
+            echo "HF_TOKEN / HF_SPACE not configured - skipping deploy."; exit 0
+          fi
+          mkdir /tmp/space
+          rsync -a --exclude '.git' --exclude '.github' ./ /tmp/space/
+          cd /tmp/space
+          # Hugging Face reads Space config from README front matter; keep the
+          # GitHub README clean and add it only to the deployed copy.
+          { printf -- '---\ntitle: Pathfinder BSIS Advisor\nemoji: 🧭\ncolorFrom: blue\ncolorTo: indigo\nsdk: docker\napp_port: 7860\npinned: false\n---\n\n'; cat README.md; } > README.tmp
+          mv README.tmp README.md
+          git init -q -b main
+          git config user.email "ci@users.noreply.github.com"
+          git config user.name "github-actions"
+          git add -A
+          git commit -q -m "Deploy ${GITHUB_SHA}"
+          git push --force "https://user:${HF_TOKEN}@huggingface.co/spaces/${HF_SPACE}" main
